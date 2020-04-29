@@ -1,0 +1,39 @@
+/* collapsable sources with buttons */
+.collapse.in {
+  background-color: #f6f6f6;
+}
+
+button {
+  float: right;
+}
+
+thead {
+  background-color: #f6f6f6;
+}
+
+
+/* Styling headers */
+th {
+  background-color: #f6f6f6 !important;
+}
+
+h1 {
+  margin: 50px 0 0 -50px !important;
+}
+
+
+/* Table of Contents*/
+.tocify-subheader>li {
+  background-color: #f6f6f6;
+  border-bottom: solid 1px #ececec;
+  padding-left: 50px !important;
+}
+
+#TOC {
+    margin: 25px 0px 0px -10px !important;
+}
+
+.tocify-subheader {
+    text-indent: -20px !important;
+    padding-left: 0 !important;
+}

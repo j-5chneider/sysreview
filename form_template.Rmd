@@ -1,0 +1,969 @@
+---
+title: "A Template for Systematic Reviews and Metaanalyses"
+description: |
+  Synthesized from  
+author:
+  - name: Jürgen Schneider 
+    url: https://uni-tuebingen.de/de/175743
+    affiliation: University of Tübingen
+    email: juergen.schneider@uni-tuebingen.de
+  - name: Iris Backfisch
+    url: https://uni-tuebingen.de/de/169665
+    affiliation: University of Tübingen
+    email: iris.backfisch@uni-tuebingen
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: true
+    code_folding: hide
+    theme: paper
+    highlight: espresso
+    number_sections: true
+css: www/style.css
+---
+
+```{r setup, echo=F, message=F, warning=F, comment=F}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+library(pander)
+library(dplyr)
+library(kableExtra)
+```
+
+\
+\
+
+# Genreal 
+
+## Working title
+
+<button data-toggle="collapse" data-target="#wt">Show sources</button>
+<div id="wt" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c("Identify the report as a protocol of a systematic review. If the protocol is for an update of a previous systematic review, identify as such",
+                                            "Not specified.",
+                                            "Working title of review (incl. Info on participatns, intervention, outcome measure, study design)",
+                                            "Working title",
+                                            "Title (that makes clear that the report is a meta-analysis / research synthesis)"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Link to Registration
+
+<button data-toggle="collapse" data-target="#ltr">Show sources</button>
+<div id="ltr" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c("Not specified.",
+                                            "Not specified.",
+                                            "If registered, provide the name of the registry (such as PROSPERO) and registration number.",
+                                            "Not specified.",
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Anticipated or actual start date
+
+<button data-toggle="collapse" data-target="#aasd">Show sources</button>
+<div id="aasd" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c("Not specified.",
+                                            "Not specified.",
+                                            "Anticipated or actual start date",
+                                            "Anticipated or actual start date",
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+
+## Stage of Review
+
+<button data-toggle="collapse" data-target="#sor">Show sources</button>
+<div id="sor" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Not specified.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Stage of review at time of this submission (preferred: The review has not yet started: Yes)",
+                                            # OSF
+                                            "Stage of Review at Completion of Pre-Registration
+                                            
+* Preliminary reading
+* Preliminary scoping & pilot search for studies
+* Study Inclusion/Exclusion Criteria and Design
+* Systematic Search & Screening, Data Extraction
+* Quality Assessment of Data
+* Analysis of Data
+* Project Write-Up",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Names, Affiliations, Contact
+
+<button data-toggle="collapse" data-target="#nac">Show sources</button>
+<div id="nac" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "* Provide name, institutional affiliation, e-mail address of all protocol authors
+* provide physical mailing address of corresponding author. Describe contributions of protocol authors and identify the guarantor of the review",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "* Name contacted incl email, address, phone number, institutional affiliation of review
+  * Review team members and their organisational affiliations.",
+                                            # OSF
+                                            "* Name contact (name, email, affilitation; Student & Supervisor details (if appropriate)
+    * Review team members and their organisational affiliations.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+## Collaborators
+
+<button data-toggle="collapse" data-target="#colla">Show sources</button>
+<div id="colla" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Not specified.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Collaborators (name & affilitation) of individuals working on the review, but are not review team member.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Amendments to previous versions
+
+<button data-toggle="collapse" data-target="#atpv">Show sources</button>
+<div id="atpv" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "If the protocol represents an amendment of a previously completed or published protocol, identify as such and list changes; otherwise, state plan for documenting important protocol amendments.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Not specified.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Funding sources
+
+<button data-toggle="collapse" data-target="#fsign">Show sources</button>
+<div id="fsign" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "* Indicate sources of financial or other support for the review.
+* Provide name for the review funder and/or sponsor
+* Describe roles of funder(s), sponsor(s), and/or institution(s), if any, in developing the protocol",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Funding sources incl grant number.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Conflict of Interest
+
+<button data-toggle="collapse" data-target="#coi">Show sources</button>
+<div id="coi" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Not specified.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Conflicts of interest (list actual or perceiveid influence on judgements; preferred: None).",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+# Introduction
+
+## Rationale & Merits
+
+<button data-toggle="collapse" data-target="#ram">Show sources</button>
+<div id="ram" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe the rationale for the review in the context of what is already known.",
+                                            # RER
+                                            "* Demonstrating the merits of the review.
+* Establishing what is already known and what needs to be known.",
+                                            # PROSPERO
+                                            "Not specified.",
+                                            # OSF
+                                            "* Area of interest (scope of review)
+  * Rationale (Abstract-like with stating research gap incl literature).",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Research Questions
+
+<button data-toggle="collapse" data-target="#rq">Show sources</button>
+<div id="rq" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Provide an explicit statement of the question(s) the review will address with reference to participants, interventions, comparators, and outcomes (PICO).",
+                                            # RER
+                                            "Articulating an answerable question.",
+                                            # PROSPERO
+                                            "Review questions (clearly & precisely).",
+                                            # OSF
+                                            "Research questions (guiding questions, sub-questions).",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+# Methods
+
+
+## Eligibility: Inclusion and Exclusion Criteria
+
+<button data-toggle="collapse" data-target="#eiaec">Show sources</button>
+<div id="eiaec" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Specify the study characteristics (such as PICO, study design, setting, time frame) and report characteristics (such as years considered, language, publication status) to be used as criteria for eligibility for the review.",
+                                            # RER
+                                            "* Establishing the right time frame 
+* Delimiting the search (grey literature?, language?)",
+                                            # PROSPERO
+                                            "Types of studies to be included (inclusion & exclusion of study designs).",
+                                            # OSF
+                                            "* Area of interest
+  * Methods included (study designs), Inclusion/ Exclusion criteria for studies",
+                                            # MARS
+                                            "* Time period in which studies needed to be conducted
+    * Inclusion and Exclusion Criteria
+      - Operational characteristics of independent (predictor) and dependent (outcomes) variable(s)
+      - Eligible participants populations
+      - Eligible research design features (e.g., random assignment only, minimal sample size)
+      - Time period in which studies needed to be conducted
+      - Geographical and/or cultural restrictions"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+## Sources of Search: List and Rationale
+
+<button data-toggle="collapse" data-target="#soslar">Show sources</button>
+<div id="soslar" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Not specified.",
+                                            # RER
+                                            "Extending search results (referential backtracking, researcher checking, journal scouring).",
+                                            # PROSPERO
+                                            "Sources of searches (Sources, date, restrictions e.g., publication period, language), NOT full search strategy.",
+                                            # OSF
+                                            "Sources of search (list & rationale).",
+                                            # MARS
+                                            "Search Strategies
+                                            
+* Reference and citation databases searched
+
+Other efforts to retrieve all available studies, e.g.,
+
+* Listservs queried
+* Contacts made with authors (and how authors were chosen)
+* Reference lists of reports examined
+* Method of addressing reports in languages other than English
+* Process for determining study eligibility
+* Aspects of reports examined (i.e., title, abstract, and/or full text)
+  - Number and qualifications of relevance judges
+  - Indication of agreement
+  - How disagreements were resolved
+* Treatment of unpublished studies"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Search Strategy
+
+<button data-toggle="collapse" data-target="#searchs">Show sources</button>
+<div id="searchs" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Present draft of search strategy to be used for at least one electronic database, including planned limits, such that it could be repeated.",
+                                            # RER
+                                            "Specifying the corpus of search terms.",
+                                            # PROSPERO
+                                            "URL to search strategy (keywords for specific database) - NOT before review is complete.",
+                                            # OSF
+                                            "Search strategy separate for each source.",
+                                            # MARS
+                                            "Registries (including prospective registries) searched: Keywords used to enter databases and registries"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+
+## Data Management Tools Used
+
+<button data-toggle="collapse" data-target="#dmtu">Show sources</button>
+<div id="dmtu" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe the mechanism(s) that will be used to manage records and data throughout the review.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Not specified.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            " Search software used and version."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+
+## Data Extraction (Selection of Studies)
+
+<button data-toggle="collapse" data-target="#desos">Show sources</button>
+<div id="desos" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "State the process that will be used for selecting studies (such as two independent reviewers) through each phase of the review (that is, screening, eligibility and inclusion in meta-analysis).",
+                                            # RER
+                                            "* Adhering to quality standards (incusion & exclusion criteria)
+* Tying back to critical questions",
+                                            # PROSPERO
+                                            "Data extraction (selection and coding): how studies will be selected for inclusion (steps & how recorded).",
+                                            # OSF
+                                            "Data extraction (describe procedure incl. tools / software used).",
+                                            # MARS
+                                            "Coding Procedures:  
+                                            Number and qualification of coders (e.g., level of expertise in the area, training)
+                                            
+* Intercoder reliability or agreement
+* Whether each report was coded by more than one coder and, if so, how disagreements were resolved
+* Assessment of study quality
+  - If a study quality scale was employed, a description of criteria and the procedures for application
+  - If study design features were coded, what these were
+* How missing data were handled"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Method of Extracting Data & Information (from Reports)
+
+<button data-toggle="collapse" data-target="#edfr">Show sources</button>
+<div id="edfr" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe planned method of extracting data from reports (such as piloting forms, done independently, in duplicate), any processes for obtaining and confirming data from investigators.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Not specified.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+
+## List and Description of Data and Information Extracted
+
+<button data-toggle="collapse" data-target="#ladodaie">Show sources</button>
+<div id="ladodaie" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "* List and define all variables for which data will be sought (such as PICO items, funding sources), any pre-planned data assumptions and simplifications
+* List and define all outcomes for which data will be sought, including prioritization of main and additional outcomes, with rationale",
+                                            # RER
+                                            "* Recording the basics (overview chart)
+  * Charting other relevant characteristics
+  * Considering potentially informative groupings",
+                                            # PROSPERO
+                                            "* Condition or domain studied (short description of outcome measures studied)
+Primary (& secondary) outcomes (DVs) of study (list)
+    * Participants (inclusion and exclusion criteria)
+    * Intervention, exposure (desribe nature of intervention to be reviewed)",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Risk of Bias in Individual Studies
+
+<button data-toggle="collapse" data-target="#robiis">Show sources</button>
+<div id="robiis" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe anticipated methods for assessing risk of bias of individual studies, including whether this will be done at the outcome or study level, or both; state how this information will be used in data synthesis.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Risk of bias (quality) assessment (describe method of assessing rish of bias or quality assessment; which characteristics of studies will be assessed; risk of bias tools used).",
+                                            # OSF
+                                            "Quality assessment (incl. critical appraisal of included studies, study design, and meta-regression by sample size)",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+# Results
+
+
+## Strategy for Data Sythesis
+
+<button data-toggle="collapse" data-target="#sfds">Show sources</button>
+<div id="sfds" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe criteria under which study data will be quantitatively synthesised.",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Strategy for data synthesis (details of planned synthesis & rationale of this method; specific applied to own data).",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Data Analysis Strategy
+
+<button data-toggle="collapse" data-target="#das">Show sources</button>
+<div id="das" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "* If data are appropriate for quantitative synthesis, describe planned summary measures, methods of handling data and methods of combining data from studies, including any planned exploration of consistency (such as I2, Kendall’s τ).
+* If quantitative synthesis is not appropriate, describe the type of summary planned",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Measures of effects of main outcomes.",
+                                            # OSF
+                                            "Data analysis (statistical methods, Heterogeneity in effect size, the prediction interval, effect size used)",
+                                            # MARS
+                                            "Statistical Methods:
+                                            
+* Effect size metric(s)
+  - Effect size calculating formulas (e.g., means and SDs, use of univariate F to r transformation, etc.)
+  - Corrections made to effect sizes (e.g., small sample bias, correction for unequal sample sizes, etc.)
+* Effect size averaging and/or weighting method(s)
+* How effect size confidence intervals (or standard errors) were calculated
+* How effect size credibility intervals were calculated, if used
+* How studies with more than one effect size were handled
+* Whether fixed‐effects and/or random‐effects models were used and the model choice justification
+* How heterogeneity in effect sizes was assessed or estimated
+* Means and SDs for measurement artifacts, if construct‐level relationships were the focus
+* Tests and any adjustments for data censoring (e.g., publication bias, selective reporting)
+* Tests for statistical outliers
+* Statistical power of the meat‐analysis
+* Statistical program or software packages used to conduct statistical analyses"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+## Moderators
+
+<button data-toggle="collapse" data-target="#modarat">Show sources</button>
+<div id="modarat" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe any proposed additional analyses (such as sensitivity or subgroup analyses, meta-regression).",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Analysis of subgroups or subsets (how are subgroups generated inclusion & exclusion criteria of study design / participants; state analytic approach).",
+                                            # OSF
+                                            "* Potential moderators (e.g., design, duration, measures)
+* subgroup analysis (based on potential moderating effects, describe procedure)",
+                                            # MARS
+                                            "Moderator and Mediator Analyses Definition of all coding categories used to test moderators or mediators of the relation(s) of interest"))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+
+## Assessment of Publication Bias
+
+<button data-toggle="collapse" data-target="#aopb">Show sources</button>
+<div id="aopb" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Specify any planned assessment of meta-bias(es) (such as publication bias across studies, selective reporting within studies).",
+                                            # RER
+                                            "Not specified.",
+                                            # PROSPERO
+                                            "Not specified.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._
+
+
+# Discussion
+
+
+## Strength of Evidence
+
+<button data-toggle="collapse" data-target="#stroe">Show sources</button>
+<div id="stroe" class="collapse">
+
+```{r}
+# avoiding markdown tables because they're not exactly the prettiest flower in the bunch
+# set up the table
+table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
+                                       "RER", 
+                                       "PROSPERO", 
+                                       "OSF", 
+                                       "MARS"),
+                            description = c(# PRISMA-P
+                                            "Describe how the strength of the body of evidence will be assessed (such as GRADE).",
+                                            # RER
+                                            "Acknowledging delimitations and limitations.",
+                                            # PROSPERO
+                                            "Not specified.",
+                                            # OSF
+                                            "Not specified.",
+                                            # MARS
+                                            "Not specified."))
+
+# produce table
+knitr::kable(table_sources) %>%
+    kable_styling(fixed_thead = T) %>%
+    column_spec(1, bold = T) %>%
+    row_spec(0, background = "#ececec")
+```
+
+</div> 
+
+_Put your text here._

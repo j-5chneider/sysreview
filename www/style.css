@@ -37,3 +37,156 @@ h1 {
     text-indent: -20px !important;
     padding-left: 0 !important;
 }
+
+/* TRANSLATE REVIEW DOC */
+/* third level header */
+.chart-title {
+  background-color: #f6f6f6;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* navbar
+.navbar {
+  background-color: #47AEB3;
+}
+ */
+ 
+ /* 
+change the color and borders of sidebar on each review page.
+*/
+ .section.sidebar {
+  top: 61px;
+  border-bottom: 10px solid #ececec;
+  border-left: 10px solid #ececec;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* 
+change a height of a standard Bootstrap navbar.
+*/
+
+.navbar {
+  min-height: 40px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    line-height: 27px;
+  }
+}
+
+/* Logo to the right in navbar */
+.navbar-header {
+    float: right !important;
+}
+
+/* margin to the left in navbar */
+.container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+
+/*KACHELN*/
+
+.transp {
+  opacity: 0.5;
+}
+
+.transp:hover {
+  opacity: 1;
+}
+
+.kachel1 {
+  background-image: url('group.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel2 {
+  background-image: url('present.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel3 {
+  background-image: url('bildtext.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel4 {
+  background-image: url('lesen.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel5 {
+  background-image: url('kachel5.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel6 {
+  background-image: url('kachel6.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel7 {
+  background-image: url('kachel7.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kachel8 {
+  background-image: url('kachel8.jpg');
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.kacheltextbox {
+  background-color: #fff; 
+  text-align:center;
+}
+
+
+/* Ränder links und rechts */
+.section.level1.vertical-layout-fill.dashboard-row-orientation {
+  margin: 0 5% 0 5% !important;
+}
+
+/* divs for review row design */
+.container {
+    justify-content: space-between !important; 
+    display: flex;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+}
+
+.box30 {
+    width: 29%;
+    margin: 20px;
+}
+
+.box60 {
+    width: 59%;
+    margin: 20px;
+}

@@ -14,7 +14,6 @@ The template is __aimed at__
 * providing a form for preregistration (enter your text, export as standalone html, upload as preregistration)
 
 We are aware that MARS targets aspects of reporting after the systemtic review/ meta-analysis is completed rather than decisions and reasoning in the planning phase as PRISMA-P and PROSPERO. MARS nevertheless provides a good framework to determine crucial points for systemtic reviews/ meta-analyses to be addressed as early as in the planning phase.
-</div>
 
   
 _Standards have been partially adapted. Click 'show changes' to see changes and reasons for change._  
@@ -38,8 +37,8 @@ How to use the template for guiding the planning phase and registration of your 
 
 1. Pull the project from github into a new R-Project
 2. Check out the file "form_template.html" from your new R-Project or [here](https://raw.githack.com/j-5chneider/sysreview/master/form_template.html): 
-   (a) Which aspects are relevant for your systematic review or meta-analysis?
-   (b) Need further information? Click the show sources button. That'll show you the wording from PRISMA-P, PROSPERO and MARS.
+   A. Which aspects are relevant for your systematic review or meta-analysis?
+   B. Need further information? Click the show sources button. That'll show you the wording from PRISMA-P, PROSPERO and MARS.
 3. Open the "form_template.Rmd" file and enter your information.
 4. Knit to HTML [PDF option pending. maybe.]
 

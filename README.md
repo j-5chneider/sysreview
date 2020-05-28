@@ -36,8 +36,8 @@ _Standards have been partially adapted. Click 'show changes' to see changes and 
 
 How to use the template for guiding the planning phase and registration of your systematic review or meta-analysis:
 
-1. Pull the project from github
-2. Check out the file "form_template.html": 
+1. Pull the project from github into a new R-Project
+2. Check out the file "form_template.html" from your new R-Project or [here](https://raw.githack.com/j-5chneider/sysreview/master/form_template.html): 
    (a) Which aspects are relevant for your systematic review or meta-analysis?
    (b) Need further information? Click the show sources button. That'll show you the wording from PRISMA-P, PROSPERO and MARS.
 3. Open the "form_template.Rmd" file and enter your information.

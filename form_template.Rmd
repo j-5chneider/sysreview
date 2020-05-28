@@ -1,26 +1,28 @@
 ---
 title: "A Template for Systematic Reviews and Metaanalyses"
-description: |
-  Synthesized from  
 author:
-  - name: Jürgen Schneider 
-    url: https://uni-tuebingen.de/de/175743
-    affiliation: University of Tübingen
-    email: juergen.schneider@uni-tuebingen.de
-  - name: Iris Backfisch
-    url: https://uni-tuebingen.de/de/169665
-    affiliation: University of Tübingen
-    email: iris.backfisch@uni-tuebingen
+- affiliation: University of Tübingen
+  email: juergen.schneider@uni-tuebingen.de
+  name: Jürgen Schneider
+  url: https://uni-tuebingen.de/de/175743
+- affiliation: University of Tübingen
+  email: iris.backfisch@uni-tuebingen
+  name: Iris Backfisch
+  url: https://uni-tuebingen.de/de/169665
 date: "`r Sys.Date()`"
-output: 
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
   html_document:
+    code_folding: hide
+    highlight: espresso
+    number_sections: yes
+    theme: paper
     toc: yes
     toc_depth: 2
-    toc_float: true
-    code_folding: hide
-    theme: paper
-    highlight: espresso
-    number_sections: true
+    toc_float: yes
+description: "Synthesized from  \n"
 css: www/style.css
 ---
 
@@ -38,9 +40,9 @@ library(kableExtra)
 <div style="border-left: 4px darkgrey solid; padding: 5px">
 __This is__ a Rmd-template for protocols and reporting of systematic reviews and meta-analyses. It synthesizes three sources of standards:
 
-* PRISMA-P [CITATIONS]
-* PROSPERO
-* MARS
+* [PRISMA-P](https://doi.org/10.1136/bmj.i4086)
+* [PROSPERO](https://www.crd.york.ac.uk/prospero/)
+* [MARS](https://doi.org/10.1037/amp0000389)
 
 The template is __aimed at__
 

@@ -11,9 +11,6 @@ author:
   url: https://uni-tuebingen.de/de/169665
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: '2'
   html_document:
     code_folding: hide
     highlight: espresso
@@ -22,6 +19,9 @@ output:
     toc: yes
     toc_depth: 2
     toc_float: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
 description: "Synthesized from  \n"
 css: www/style.css
 ---
@@ -37,7 +37,7 @@ library(kableExtra)
 \
 \
 
-<div style="border-left: 4px darkgrey solid; padding: 5px">
+<div style="padding: 5px; background-color: #F0F0F0;">
 __This is__ a Rmd-template for protocols and reporting of systematic reviews and meta-analyses. It synthesizes three sources of standards:
 
 * [PRISMA-P](https://doi.org/10.1136/bmj.i4086)

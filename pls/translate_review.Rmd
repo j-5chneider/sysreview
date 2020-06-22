@@ -43,8 +43,8 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Row
 -----------------------------------------------------------------------
 
-### [Arbeiten in Gruppen](#section-unterstützung-bei-kollaboration) {.transp .kachel1}
-<div class="kacheltextbox">[Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.](#section-unterstützung-bei-kollaboration)</div>
+### [Arbeiten in Gruppen](#unterstützung-bei-kollaboration) {.transp .kachel1}
+<div class="kacheltextbox">[Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.](#unterstützung-bei-kollaboration)</div>
 
 ### Inhalte präsentieren {.transp .kachel2}
 <div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>

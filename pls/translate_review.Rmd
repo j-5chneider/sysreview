@@ -24,9 +24,9 @@ Row
 <span style="text-weight: bold; font-size: 2em">Was wissen wir über...?</span>   
 \
 
-Auf diesen Seiten erhalten Sie verständlich aufbereitete Informationen zu Erkenntnissen aus der Lehr-Lernforschung rund um das Thema __digitale Medien in der Schule__.  
+Auf diesen Seiten erhalten Sie verständlich aufbereitete Informationen zu Erkenntnissen aus der Lehr-Lernforschung und Unterrichtsforschung rund um das Thema __digitale Medien in der Schule__.  
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Die hier aufbereiteten Erkenntnisse spiegeln Forschungsergebnisse von so genannten systematischen Übersichtsarbeiten (d.h., Forschungssynthesen, Reviews, Metaanalysen) dar. Diese Übersichtsarbeiten sind von verschiedenen Autorinnen und Autoren erstellt und in Fachzeitschriften meist in englischer Sprache erschienen. Für die Übersicht hier sind diese Fachartikel auf Deutsch und in leicht verständlicher Sprache aufbereitet. Zudem werden ausgehend von den wissenschaftlichen Erkenntnissen Auswirkungen auf das Unterrichten und Lernen abgeleitet.
 
 </div>
 
@@ -46,13 +46,13 @@ Row
 ### [Arbeiten in Gruppen](#unterstützung-bei-kollaboration) {.transp .kachel1}
 <div class="kacheltextbox">[Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.](#unterstützung-bei-kollaboration)</div>
 
-### Inhalte präsentieren {.transp .kachel2}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+### [Gamification](#Gamification) {.transp .kachel2}
+<div class="kacheltextbox">[Gamification ist die Nutzung von spielerischen Elementen während des Lernens. Gamification führt zu mehr Lernerfolg als ohne spielerische Elemente zu lernen](#gamification)</div>
 
 ### Text und Bild kombinieren {.transp .kachel3}
 <div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
 
-### Lesen und Schreiben {.transp .kachel4}
+### Medienbildung {.transp .kachel4}
 <div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
 
 Row
@@ -70,6 +70,17 @@ Row
 ### Thema x {.transp .kachel8}
 <div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
 
+
+
+
+
+
+
+
+
+
+
+
 # Unterstützung bei Kollaboration {data-navmenu="Kurzreviews" data-icon="fa-list-alt"}
 
 
@@ -77,6 +88,9 @@ Row {.tabset}
 -----------------------------------------------------------------------
 
 ### Das Review {data-width=50}
+
+[comment]: <> (This is a comment, it will not be included)
+
 
 <div class="container">
 <div class="box30">
@@ -231,7 +245,193 @@ valueBox(2.8,
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+# Gamification {data-navmenu="Kurzreviews" data-icon="fa-list-alt"}
+
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### Das Review {data-width=50}
+
+<div class="container">
+<div class="box30">
+```{r, fig.width=5}
+####### MAKE MEAN HORIZONTAL LINE ###
+# https://stackoverflow.com/questions/52713272/adding-a-mean-to-geom-density-ridges
+
+
+data_p <- data.frame(x = c(rnorm(500, 1, 1), rnorm(500, 0, 1)),
+                     gr = c(rep("mit Gamification", 500), rep("ohne Gamification", 500)))
+
+means_p <- data_p %>%
+  group_by(gr) %>%
+  summarize(xmean = mean(x)) %>%
+  ungroup()
+
+
+p <- ggplot(data_p, aes(x=x, group = gr, fill = gr)) + 
+         geom_segment(aes(x=means_p$xmean[1], y=0, yend=.352, xend=means_p$xmean[1]), color = "#BD700F", size = 2) +
+         geom_segment(aes(x=means_p$xmean[2], y=0, yend=.352, xend=means_p$xmean[2]), color = "#BD222F", size = 2) +
+         geom_density(alpha = 0.5, colour = NA, adjust = 2) +
+         # geom_vline(xintercept = means_p$xmean[1], colour = "#47AEB3") +
+         # geom_vline(xintercept = means_p$xmean[2], colour = "#B36D3E") +
+         theme_minimal() +
+         scale_fill_manual(values = c("#BD700F", "#BD222F")) +
+         xlab("Punkte im Leistungstest") +
+         ylab("Dichte") +
+         theme(legend.position = c(0.13, 0.9),
+               legend.background = element_rect(fill=NA, 
+                                                size=0.5, 
+                                                colour=NA,
+                                                linetype="solid"),
+               legend.title = element_blank())
+
+p
+```
+</div>
+
+<div class="box60">
+__Betrachtete die Forschungsfrage__   
+"Fördert ein spielerischer Zugang zu Lerninhalten, d.h., [Gamification](), die fachliche Leistung von Schülerinnen und Schülern?"
+"Welche Elemente von [Gamification]() sind besonders lernförderlich?"
+\
+\
+
+__Untersucht wurden...__   
+
+Insgesamt wurden 3202 Lernende untersucht. Das waren sowohl Schülerinnen und Schüler als auch Studierende von Universitäten. Die Studien wurden sowohl im Bereich des Erlernens von Sprachen als auch im Informatikbereich durchgeführt. Innerhalb der Studien haben die Lernenden 4 – 12 Wochen mit den spielerischen Elementen gelernt.
+
+\
+\
+__Die Ergebnisse__  
+Über alle Studien hinweg zeigte sich, dass Lernende die spielerischen Elemente anwendeten während des Lernens signifikant mehr lernten als Lernende die ohne spielerische Elemente lernten. Weitere Analysen zeigten, dass die Länge der Lerneinheiten mit spielerischen Elementen entscheidend für deren Erfolg war. Die Lerneinheiten mit spielerischen Elementen, die eine Dauer von 1 – 3 Monaten hatten zeigten den größten Unterschied im Lernerfolg zu Lerneinheiten ohne spielerische Elemente in der gleichen Dauer. Allerdings machte weder die Art der spielerischen Elemente noch die Anzahl der Elemente einen Unterschied. Zudem zeigte eine Auswertung von Interviews und Eindrücken von Lernenden, dass die spielerischen Elemente dazu führten, dass Lernende lieber lernten und vor allem die Rückmeldung zu ihrem Lernstand wie auch die daraus entstehende Wertschätzung mochten. Weiterhin regten sie die spielerischen Elemente dazu an höhere Ziele zu setzen und mehr Aufgaben zu erledigen. Allerdings muss den Lernenden die Nützlichkeit der spielerischen Elemente bewusst gemacht werden und eine Belohnung direkt nach Erreichung eines Ziels gegeben werden. Zudem sollte darauf geachtet werden, dass keine Ängste oder Neid unter den Lernenden entsteht.
+\
+\
+
+
+__Wie gesichert ist dieses Wissen?__  
+
+Wir stufen die Erkenntnisse aus dem Review als gesichert ein:
+  
+_Überzeugend_ ist...
+
+* dass die einzelnen aufgenommenen Studien eine hohe Qualität aufweisen.
+* dass neben quantitativen Studien auch qualitative Studien synthetisiert wurden
+
+
+\
+
+_Problematisch_ ist...
+
+* dass die Wirkmechanismen von spielerischen Elementen in einzelnen Fächer aufgrund der geringen empirischen Basis nicht differenziert betrachtet werden konnten.
+
+</div>
+</div>
+
+### Implikationen für die Praxis {data-width=25}
+<div class="container">
+<div class="box30">
+```{r, fig.width=5}
+p
+```
+</div>
+
+<div class="box60">
+
+__Implikationen__  
+Diese Analysen zeigen, dass das Lernen mit spielerischen Elementen dem Lernen ohne diese Elemente überlegen ist. Insbesondere scheinen mittellange Lerneinheiten besonders wirksam zu sein. Zudem scheint die Anzahl der spielerischen Elemente nicht entscheidend zu sein, aber die Passung dieser Elemente mit der jeweiligen Aufgabe. Eine mögliche Belohnung oder Rückmeldung sollte daher direkt nach der Erledigung der Aufgabe gezeigt werden.
+\
+\
+
+__Beispiele__  
+
+* [Link zu Beispiel 1]()
+* [Link zu Beispiel 2]()
+* [Link zu Beispiel 3]()
+\
+\
+
+__Tools__  
+
+* [Link zu Tool 1]()
+* [Link zu Tool 2]()
+* [Link zu Tool 3]()
+
+</div>
+</div>
+
+
+Row
+-----------------------------------------------------------------------
+
+### Cohen's $U_3$
+
+```{r}
+gauge(84, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(80, 100), warning = c(40, 79), danger = c(0, 39)
+))
+```
+84.1% of the "treatment" group will be above the mean of the "control" group
+
+### % Overlap
+
+```{r}
+gauge(62, min = 0, max = 100, symbol = "%", gaugeSectors(
+  success = c(41, 50), warning = c(21, 40), danger = c(0, 20)
+))
+```
+61.7% of the two groups will overlap
+
+### Probability of Superiority
+
+```{r}
+gauge(76, min = 0, max = 100, symbol="%", gaugeSectors(
+  success = c(0, 100)
+))
+```
+There is a 76% chance that a person picked at random from the treatment group will have a higher score than a person picked at random from the control group
+
+### Number Needed to Treat
+```{r}
+valueBox(2.8, 
+         icon = "fa-user-plus", 
+         caption = "Number needed to treat: In order to have one more favorable outcome in the treatment group compared to the control group, we need to treat 2.8 people on average",
+         color ="#deb787") #18bc9c 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Wie entsteht ein Kurzreview? {data-navmenu="About" data-icon="fa-question-circle"}
+
+
+
+
+
+
+
+
+
 
 # Autor\*innen und Projekt {data-navmenu="About" data-icon="fa-university"}
 

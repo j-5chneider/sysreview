@@ -785,7 +785,8 @@ _Put your text here._
 # set up the table
 table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
                                        "PROSPERO", 
-                                       "MARS"),
+                                       "MARS",
+                                       "Added by authors"),
                             description = c(# PRISMA-P
                                             "Describe anticipated methods for assessing risk of bias of individual studies, including whether this will be done at the outcome or study level, or both; state how this information will be used in data synthesis",
                                             # PROSPERO
@@ -794,7 +795,9 @@ table_sources <- data.frame(source = c("PRISMA-P",     # first column will be al
                                             "Describe any methods used to assess risk to internal validity in individual study results, including
 
 * Risks assessed and criteria for concluding risk exists or does not exist
-* Methods for including risk to internal validity in the decisions to synthesize of the data and the interpretation of results"))
+* Methods for including risk to internal validity in the decisions to synthesize of the data and the interpretation of results",
+                                            # added by authors
+                                            "Describe how the quality of original studies are rated. E.g. by 'The Study Design and Implementation Assessment Device (Study DIAD)': https://doi.org/10.1037/1082-989X.13.2.130"))
 
 # produce table
 knitr::kable(table_sources) %>%

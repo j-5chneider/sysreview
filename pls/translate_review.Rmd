@@ -130,7 +130,7 @@ p
 </div>
 
 <div class="box60">
-__Betrachtete die Forschungsfrage__   
+__Betrachtete Forschungsfrage__   
 "Fördern [Kollaborationsskrips]() die fachliche Leistung von Schülerinnen und Schülern?"
 \
 \
@@ -302,7 +302,7 @@ p
 </div>
 
 <div class="box60">
-__Betrachtete die Forschungsfrage__   
+__Betrachtete Forschungsfrage__   
 "Fördert ein spielerischer Zugang zu Lerninhalten, d.h., [Gamification](), die fachliche Leistung von Schülerinnen und Schülern?"
 "Welche Elemente von [Gamification]() sind besonders lernförderlich?"
 \

@@ -814,7 +814,7 @@ _Put your text here._
 # Results
 
 
-## Strategy for Data Sythesis
+## Strategy for Data Synthesis
 
 <button data-toggle="collapse" data-target="#sfds">show sources</button>
 <div id="sfds" class="collapse">

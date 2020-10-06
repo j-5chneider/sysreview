@@ -78,7 +78,7 @@ _Standards have been partially adapted. Click 'show changes' to see changes and 
 
 ## Working Title
 
-<button data-toggle="collapse" data-target="#wt">show sources</button>
+<button data-toggle="collapse" data-target="#wt">more info</button>
 <div id="wt" class="collapse">
 
 ```{r}
@@ -111,7 +111,7 @@ _Put your text here._
 
 ## Type of Review
 
-<button data-toggle="collapse" data-target="#typeor">show sources</button>
+<button data-toggle="collapse" data-target="#typeor">more info</button>
 <div id="typeor" class="collapse">
 
 ```{r}
@@ -150,7 +150,7 @@ _Put your text here._
 
 ## Link to Registration
 
-<button data-toggle="collapse" data-target="#ltr">show sources</button>
+<button data-toggle="collapse" data-target="#ltr">more info</button>
 <div id="ltr" class="collapse">
 
 ```{r}
@@ -180,7 +180,7 @@ _Put your text here._
 
 ## Anticipated start and completion date
 
-<button data-toggle="collapse" data-target="#aasd">show sources</button>
+<button data-toggle="collapse" data-target="#aasd">more info</button>
 <div id="aasd" class="collapse">
 
 ```{r}
@@ -211,7 +211,7 @@ _Put your text here._
 
 ## Stage of Review
 
-<button data-toggle="collapse" data-target="#sor">show sources</button>
+<button data-toggle="collapse" data-target="#sor">more info</button>
 <div id="sor" class="collapse">
 
 ```{r}
@@ -264,7 +264,7 @@ _Put your text here._
 
 ## Names, Affiliations, Contact
 
-<button data-toggle="collapse" data-target="#nac">show sources</button>
+<button data-toggle="collapse" data-target="#nac">more info</button>
 <div id="nac" class="collapse">
 
 ```{r}
@@ -299,7 +299,7 @@ _Put your text here._
 
 ## Collaborators
 
-<button data-toggle="collapse" data-target="#colla">show sources</button>
+<button data-toggle="collapse" data-target="#colla">more info</button>
 <div id="colla" class="collapse">
 
 ```{r}
@@ -328,7 +328,7 @@ _Put your text here._
 
 ## Amendments to previous versions
 
-<button data-toggle="collapse" data-target="#atpv">show sources</button>
+<button data-toggle="collapse" data-target="#atpv">more info</button>
 <div id="atpv" class="collapse">
 
 ```{r}
@@ -358,7 +358,7 @@ _Put your text here._
 
 ## Funding sources, sponsors and their roles
 
-<button data-toggle="collapse" data-target="#fsign">show sources</button>
+<button data-toggle="collapse" data-target="#fsign">more info</button>
 <div id="fsign" class="collapse">
 
 ```{r}
@@ -393,7 +393,7 @@ _Put your text here._
 
 ## Conflict of Interest
 
-<button data-toggle="collapse" data-target="#coi">show sources</button>
+<button data-toggle="collapse" data-target="#coi">more info</button>
 <div id="coi" class="collapse">
 
 ```{r}
@@ -425,7 +425,7 @@ _Put your text here._
 
 ## Rationale
 
-<button data-toggle="collapse" data-target="#ram">show sources</button>
+<button data-toggle="collapse" data-target="#ram">more info</button>
 <div id="ram" class="collapse">
 
 ```{r}
@@ -465,7 +465,7 @@ _Put your text here._
 
 ## Research Questions
 
-<button data-toggle="collapse" data-target="#rq">show sources</button>
+<button data-toggle="collapse" data-target="#rq">more info</button>
 <div id="rq" class="collapse">
 
 ```{r}
@@ -501,7 +501,7 @@ _Put your text here._
 
 ## Eligibility: Inclusion and Exclusion Criteria
 
-<button data-toggle="collapse" data-target="#eiaec">show sources</button>
+<button data-toggle="collapse" data-target="#eiaec">more info</button>
 <div id="eiaec" class="collapse">
 
 ```{r}
@@ -509,7 +509,8 @@ _Put your text here._
 # set up the table
 table_sources <- data.frame(source = c("PRISMA-P",     # first column will be always the same
                                        "PROSPERO", 
-                                       "MARS"),
+                                       "MARS",
+                                       "Added by authors"),
                             description = c(# PRISMA-P
                                             "Specify the study characteristics (such as PICO, study design, setting, time frame) and report characteristics (such as years considered, language, publication status) to be used as criteria for eligibility for the review",
                                             # PROSPERO
@@ -523,7 +524,13 @@ table_sources <- data.frame(source = c("PRISMA-P",     # first column will be al
 * Handling of multiple reports about the same study or sample, describing which are primary and handling of multiple measures using the same participants
 * Restrictions on study inclusion (e.g., by study age, language, location, or report type)
 * Changes to the prespecified inclusion and exclusion criteria, and when these changes were made
-* Handling of reports that did not contain sufficient information to judge eligibility (e.g., lacking information about study design) and reports that did not include sufficient information for analysis (e.g., did not report numerical data about those outcomes)"))
+* Handling of reports that did not contain sufficient information to judge eligibility (e.g., lacking information about study design) and reports that did not include sufficient information for analysis (e.g., did not report numerical data about those outcomes)",
+                                            # added by authors
+                                            "Alternative approaches (to PICO) to describe study characteristics:
+
+* SPIDER: relevant, when including qualitative research (https://doi.org/10.1177/1049732312452938)
+* PICOS: Compared to PICO includes study design and reaches higher specifity (ISBN: 978-1-900640-47-3; https://www.york.ac.uk/media/crd/Systematic_Reviews.pdf)
+* UTOS (ISBN: 978-0875895253)"))
 
 # produce table
 knitr::kable(table_sources) %>%
@@ -538,7 +545,7 @@ _Put your text here._
 
 ## Sources of Search: List and Rationale
 
-<button data-toggle="collapse" data-target="#soslar">show sources</button>
+<button data-toggle="collapse" data-target="#soslar">more info</button>
 <div id="soslar" class="collapse">
 
 ```{r}
@@ -578,7 +585,7 @@ _Put your text here._
 
 ## Search Strategy
 
-<button data-toggle="collapse" data-target="#searchs">show sources</button>
+<button data-toggle="collapse" data-target="#searchs">more info</button>
 <div id="searchs" class="collapse">
 
 ```{r}
@@ -609,7 +616,7 @@ _Put your text here._
 
 ## Data Management Tools Used
 
-<button data-toggle="collapse" data-target="#dmtu">show sources</button>
+<button data-toggle="collapse" data-target="#dmtu">more info</button>
 <div id="dmtu" class="collapse">
 
 ```{r}
@@ -638,9 +645,9 @@ _Put your text here._
 
 
 
-## Data Extraction (Selection of Studies)
+## Selection of Studies
 
-<button data-toggle="collapse" data-target="#desos">show sources</button>
+<button data-toggle="collapse" data-target="#desos">more info</button>
 <div id="desos" class="collapse">
 
 ```{r}
@@ -673,7 +680,7 @@ _Put your text here._
 
 ## Method of Extracting Data & Information (from Reports)
 
-<button data-toggle="collapse" data-target="#edfr">show sources</button>
+<button data-toggle="collapse" data-target="#edfr">more info</button>
 <div id="edfr" class="collapse">
 
 ```{r}
@@ -707,7 +714,7 @@ _Put your text here._
 
 ## List and Description of Data and Information Extracted
 
-<button data-toggle="collapse" data-target="#ladodaie">show sources</button>
+<button data-toggle="collapse" data-target="#ladodaie">more info</button>
 <div id="ladodaie" class="collapse">
 
 ```{r}
@@ -746,7 +753,7 @@ _Put your text here._
 
 ## Effect size transformation from individual studies
 
-<button data-toggle="collapse" data-target="#estfis">show sources</button>
+<button data-toggle="collapse" data-target="#estfis">more info</button>
 <div id="estfis" class="collapse">
 
 ```{r}
@@ -777,7 +784,7 @@ _Put your text here._
 
 ## Risk of Bias in Individual Studies
 
-<button data-toggle="collapse" data-target="#robiis">show sources</button>
+<button data-toggle="collapse" data-target="#robiis">more info</button>
 <div id="robiis" class="collapse">
 
 ```{r}
@@ -816,7 +823,7 @@ _Put your text here._
 
 ## Strategy for Data Synthesis
 
-<button data-toggle="collapse" data-target="#sfds">show sources</button>
+<button data-toggle="collapse" data-target="#sfds">more info</button>
 <div id="sfds" class="collapse">
 
 ```{r}
@@ -858,7 +865,7 @@ _Put your text here._
 
 ## Moderators/ Subgroups
 
-<button data-toggle="collapse" data-target="#modarat">show sources</button>
+<button data-toggle="collapse" data-target="#modarat">more info</button>
 <div id="modarat" class="collapse">
 
 ```{r}
@@ -889,7 +896,7 @@ _Put your text here._
 
 ## Assessment of Publication Bias
 
-<button data-toggle="collapse" data-target="#aopb">show sources</button>
+<button data-toggle="collapse" data-target="#aopb">more info</button>
 <div id="aopb" class="collapse">
 
 ```{r}
@@ -926,9 +933,9 @@ _Put your text here._
 # Discussion
 
 
-## Strength of Evidence
+## Strength of Cumulative Evidence
 
-<button data-toggle="collapse" data-target="#stroe">show sources</button>
+<button data-toggle="collapse" data-target="#stroe">more info</button>
 <div id="stroe" class="collapse">
 
 ```{r}

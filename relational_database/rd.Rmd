@@ -1,0 +1,310 @@
+---
+title: "&nbsp;"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+    css: www/style.css
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+# tmp <- data.frame(citation = c("Attali, Y., & Burstein, J. (2004, Juni 13). Automated essay scoring with e-rater V.2.0. Conference of the International Association for Educational Assessment (IAEA), Philadelphia. https://www.ets.org/Media/Products/e-rater/erater_IAEA.pdf", "Brooks, C., Carroll, A., University of Queensland, Gillies, R., University of Queensland, Hattie, J., & University of Melbourne. (2019). A Matrix of Feedback. Australian Journal of Teacher Education, 44(4), 14–32. https://doi.org/10.14221/ajte.2018v44n4.2"),
+#                   pub = c("scholarly", "grey"))
+# write.csv(tmp, file="relational_database/databases/header.csv", row.names = F)
+# tmp <- data.frame(citation = c("Attali, Y., & Burstein, J. (2004, Juni 13). Automated essay scoring with e-rater V.2.0. Conference of the International Association for Educational Assessment (IAEA), Philadelphia. https://www.ets.org/Media/Products/e-rater/erater_IAEA.pdf", "Attali, Y., & Burstein, J. (2004, Juni 13). Automated essay scoring with e-rater V.2.0. Conference of the International Association for Educational Assessment (IAEA), Philadelphia. https://www.ets.org/Media/Products/e-rater/erater_IAEA.pdf", "Brooks, C., Carroll, A., University of Queensland, Gillies, R., University of Queensland, Hattie, J., & University of Melbourne. (2019). A Matrix of Feedback. Australian Journal of Teacher Education, 44(4), 14–32. https://doi.org/10.14221/ajte.2018v44n4.2"),
+#                     sample_label = c("pilot", "study1", "study1"),
+#                     sample_n = c(44, 53, 35),
+#                     sample_loc = c("Germany", "USA", "USA"))
+# write.csv(tmp, file="relational_database/databases/samples.csv", row.names = F)
+
+
+library(flexdashboard)
+library(shiny)
+library(shinyWidgets)
+library(fontawesome)
+library(dplyr)
+# testrmd::init()
+# knitr::opts_chunk$set(test = T) 
+
+header <- reactive({
+  read.csv(file = "databases/header.csv") %>%
+    mutate(citation = paste(substr(citation, 1, 100), " ..."))
+  })
+```
+
+# Coder 1
+
+Row {data-height=200}
+-----------------------------------------------------------------------
+### {data-width=70%}
+
+```{r}
+
+wellPanel(
+# display all papers as searchable dropdown
+conditionalPanel(condition = ('!input.switch_new'),
+  selectInput('citation_old',
+              label = tags$p(fa("file-alt"), strong("show paper"), br(), "select from below (type to search)"),
+              choices = "",
+              width = "100%")
+),
+
+# add new study
+conditionalPanel(condition = ('input.switch_new'),
+  textInput('citation_new',
+            tags$p(fa("plus-circle"), strong("add new paper"), br(), "Citation:"),
+            width = "100%")
+)
+)
+
+# switch for choosing to add new
+prettySwitch(inputId = "switch_new",
+             label = "add new paper",
+             fill = TRUE, 
+             status = "info")
+
+####################################### #
+## UPDATE: CITATION OLD                 #
+####################################### #
+observe({
+      header_button <- read.csv(file = "databases/header.csv")
+      updateSelectInput(session,
+                        "citation_old",
+                        choices = header_button$citation
+                        )
+      header()
+  })
+
+```
+
+### {data-width=30%}
+```{r}
+####################################### #
+## UPDATE: PUBLICATION STATUS           #
+####################################### #
+observe({
+      input$switch_new
+      ps_update <- read.csv(file = "databases/header.csv")
+      selected <- ps_update$pub[ps_update$citation == input$citation_old]
+      updateSelectInput(session,
+                        "pub_stat",
+                        selected = selected
+                        )
+  })
+
+####################################### #
+## DROPDOWN: PUBLICATION STATUS         #
+####################################### #
+
+wellPanel(
+  selectInput('pub_stat',
+              label = tags$p(fa("book"), strong("Publication status:"), br(), br()),
+              choices = c("-- choose --" = "",
+                          "scholarly published (journal/ book)" = "scholarly",
+                          "grey literature (e.g. preprint)" = "grey"),
+              width = "300px"
+              )
+  )
+
+####################################### #
+## BUTTON: SAVE                         #
+####################################### #
+actionBttn(
+    "save_new",
+    # label = bttn_label,
+    icon = icon("save"),
+    style = "simple",
+    color = "primary",
+    size = "sm",
+    block = F,
+    no_outline = F
+    )
+br()
+span(em("saves citation and publication status"), style="font-size:.8em;")
+
+## Notification ########################################################
+observeEvent(input$save_new, {
+  showNotification(tags$p(fa("check", fill = "green"), strong("SAVED"), style="font-size:2em;"), 
+                   duration = 2, 
+                   closeButton = F,
+                   type = c("message"),
+                   session = session)})
+
+####################################### #
+## UPDATE: Button label                 #
+####################################### #
+observe({
+      if (isFALSE(input$switch_new)){
+        bttn_label <- "&nbsp;&nbsp;EDIT"}
+      else {
+        bttn_label <- "&nbsp;&nbsp;SAVE NEW"}
+      
+      updateActionButton(session,
+                        "save_new",
+                        label = bttn_label
+                        )
+  })
+
+####################################### #
+## SAVE: header database                #
+####################################### #
+## save new entry to header database ###################################
+header <- eventReactive(input$save_new, {
+  header_button <- read.csv(file = "databases/header.csv")
+
+  if (isTRUE(input$switch_new)){
+    header_tmp <- rbind(header_button,
+                        data.frame(citation = input$citation_new,
+                                   pub = input$pub_stat))
+  }
+  else {
+    header_tmp <- header_button %>%
+      mutate(pub = ifelse(citation == input$citation_old, input$pub_stat, as.character(pub)))
+  }
+  header_tmp <- header_tmp %>%
+    mutate(citation = paste(substr(citation, 1, 100), " ..."))
+    
+  write.csv(header_tmp, file = "databases/header.csv", row.names = F)
+
+  updateSelectInput(session,
+                    "citation_old",
+                    choices = header_tmp$citation
+                    )
+
+  return(read.csv(file = "databases/header.csv"))
+})
+```
+
+
+Row {.tabset .tabset-fade data-height=400}
+-----------------------------------------------------------------------
+
+### Paper
+
+#### Inspect metadata of the studies listed so far.
+
+```{r}
+prettySwitch(inputId = "switch_paper",
+             label = "show meta database",
+             fill = TRUE, 
+             status = "info")
+
+header_disp <- eventReactive(c(input$switch_paper, input$save_new),{
+  read.csv(file = "databases/header.csv")
+})
+
+conditionalPanel(condition = 'input.switch_paper',
+                 renderTable(header_disp()))
+
+```
+
+
+
+### Samples (studies)
+
+#### Enter features of samples ("sub-studies") within the paper.
+
+```{r}
+wellPanel(
+  tags$table(
+             tags$tr(width = "100%",
+                     tags$td(width = "30%", div(tags$span(strong("Label"), br(), em("name the sample")))),
+                     tags$td(width = "70%", textInput('sample_label', label = NULL, placeholder = "e.g. pilot study", width = "450px"))),
+             tags$tr(width = "100%",
+                     tags$td(width = "30%", div(tags$span(strong("N"), br(), "of sample"))),
+                     tags$td(width = "70%", numericInput('sample_n', label = NULL, value = 0, min = 0, step = 1))),
+             tags$tr(width = "100%",
+                     tags$td(width = "30%", tags$span(strong("Geographic Location"), br(), "Country")),
+                     tags$td(width = "70%", textInput('sample_loc', label = NULL, placeholder = "e.g. USA")))
+           ),
+  actionBttn(
+    "save_samp",
+    label = "SAVE",
+    icon = icon("save"),
+    style = "simple",
+    color = "primary",
+    size = "sm",
+    block = F,
+    no_outline = F
+    )
+)
+
+prettySwitch(inputId = "switch_sample",
+             label = "show sample database (of this paper)",
+             fill = TRUE, 
+             status = "info")
+
+samples_disp <- eventReactive(c(input$switch_sample, input$citation_old),{
+  read.csv(file = "databases/samples.csv") %>%
+    mutate(citation = paste(substr(citation, 1, 100), " ...")) %>% 
+    filter(citation == input$citation_old) %>%
+    select(-citation)
+})
+
+conditionalPanel(condition = 'input.switch_sample',
+                 renderTable(samples_disp()))
+```
+
+
+
+### Conditions
+
+```{r}
+wellPanel(
+  tags$table(
+             tags$tr(width = "100%",
+                     tags$td(width = "30%", div(tags$span(strong("Sample selected"), br(), em("within paper")))),
+                     tags$td(width = "70%", selectInput('sample_cond', label = NULL, choices = NULL, width = "450px"))))
+)
+
+observeEvent(c(input$save_samp, input$citation_old), {
+  samples <- read.csv(file = "databases/samples.csv") %>%
+                  mutate(citation = paste(substr(citation, 1, 100), " ...")) %>%
+                  dplyr::filter(citation == input$citation_old)
+
+  updateSelectInput(session,
+                    "sample_cond",
+                    choices = samples$sample_label
+                    )
+})
+```
+
+
+#### Enter features of conditions within the sample
+```{r}
+wellPanel(
+  tags$table(
+             tags$tr(width = "100%",
+                     tags$td(width = "30%", div(tags$span(strong("Label"), br(), em("name the condition")))),
+                     tags$td(width = "70%", textInput('cond_label', label = NULL, placeholder = "e.g. control group", width = "450px"))),
+             tags$tr(width = "100%",
+                     tags$td(width = "30%", div(tags$span(strong("N"), br(), "of condition"))),
+                     tags$td(width = "70%", numericInput('cond_n', label = NULL, value = 0, min = 0, step = 1))),
+           )
+)
+
+prettySwitch(inputId = "switch_cond",
+             label = "show condition database (of this sample)",
+             fill = TRUE, 
+             status = "info")
+
+cond_disp <- eventReactive(c(input$switch_cond, input$citation_old),{
+  read.csv(file = "databases/samples.csv") %>%
+    mutate(citation = paste(substr(citation, 1, 100), " ...")) %>% 
+    filter(citation == input$citation_old) %>%
+    select(-citation)
+})
+
+conditionalPanel(condition = 'input.switch_cond',
+                 renderTable(cond_disp()))
+```
+
+
+### Effect Sizes
+
+
+# Coder 2
+
+
+# Agreement

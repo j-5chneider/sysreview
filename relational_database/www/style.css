@@ -1,0 +1,7 @@
+
+/* make notification appear centered */
+.shiny-notification {
+  position:fixed;
+  top: calc(25%);
+  left: calc(45%);
+}

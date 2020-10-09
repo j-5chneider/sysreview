@@ -46,10 +46,10 @@ __This is__ a Rmd-template for protocols and reporting of systematic reviews and
 
 The template is __aimed at__
 
-* guiding the process of planning the systemtic review/ meta-analysis
+* guiding the process of planning the systematic review/ meta-analysis
 * providing a form for preregistration (enter your text, export as standalone html, upload as preregistration)
 
-We are aware that MARS targets aspects of reporting after the systemtic review/ meta-analysis is completed rather than decisions and reasoning in the planning phase as PRISMA-P and PROSPERO. MARS nevertheless provides a good framework to determine crucial points for systemtic reviews/ meta-analyses to be addressed as early as in the planning phase.
+We are aware that MARS targets aspects of reporting after the systematic review/ meta-analysis is completed rather than decisions and reasoning in the planning phase as PRISMA-P and PROSPERO. MARS nevertheless provides a good framework to determine crucial points for systematic reviews/ meta-analyses to be addressed as early as in the planning phase.
 </div>
 
   

@@ -751,7 +751,7 @@ knitr::kable(table_sources) %>%
 _Put your text here._
 
 
-## Effect size transformation from individual studies
+## Effect Size Transformation from Individual Studies
 
 <button data-toggle="collapse" data-target="#estfis">more info</button>
 <div id="estfis" class="collapse">

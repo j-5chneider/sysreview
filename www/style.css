@@ -120,13 +120,13 @@ change a height of a standard Bootstrap navbar.
 }
 
 .kachel2 {
-  background-image: url('present.jpg');
+  background-image: url('kachel2.jpg');
   background-size: cover;
   background-color: #cccccc;
 }
 
 .kachel3 {
-  background-image: url('bildtext.jpg');
+  background-image: url('mobil-im-freien.jpg');
   background-size: cover;
   background-color: #cccccc;
 }
@@ -156,7 +156,7 @@ change a height of a standard Bootstrap navbar.
 }
 
 .kachel8 {
-  background-image: url('kachel8.jpg');
+  background-image: url('present.jpg');
   background-size: cover;
   background-color: #cccccc;
 }
@@ -167,7 +167,7 @@ change a height of a standard Bootstrap navbar.
 }
 
 
-/* Ränder links und rechts */
+/* PREREG Ränder links und rechts */
 .section.level1.vertical-layout-fill.dashboard-row-orientation {
   margin: 0 5% 0 5% !important;
 }
@@ -183,10 +183,45 @@ change a height of a standard Bootstrap navbar.
 
 .box30 {
     width: 29%;
-    margin: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .box60 {
     width: 59%;
-    margin: 20px;
+    margin-top: 20px;
+}
+
+/* SPEZIFISCHE HINTERGRÜNDE*/
+.box30_1 {
+    width: 29%;
+    margin-top: 20px;
+    background-image: url('tblig.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.box30_2 {
+    width: 29%;
+    margin-top: 20px;
+    background-image: url('https://live.staticflickr.com/343/19819155226_7a99e683d1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.box30_2_1{
+    width: 29%;
+    margin-top: 20px;
+    background-image: url('https://live.staticflickr.com/343/19819155226_7a99e683d1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.box30_3 {
+    width: 29%;
+    margin-top: 20px;
+    background-image: url('mobil-im-freien.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }

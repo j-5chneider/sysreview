@@ -7,6 +7,8 @@ output:
     theme: flatly
     self_contained: true
 css: ../www/style.css
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +28,7 @@ Row
 
 Auf diesen Seiten erhalten Sie verständlich aufbereitete Informationen zu Erkenntnissen aus der Lehr-Lernforschung und Unterrichtsforschung rund um das Thema __digitale Medien in der Schule__.  
 
-Die hier aufbereiteten Erkenntnisse spiegeln Forschungsergebnisse von so genannten systematischen Übersichtsarbeiten (d.h., Forschungssynthesen, Reviews, Metaanalysen) dar. Diese Übersichtsarbeiten sind von verschiedenen Autorinnen und Autoren erstellt und in Fachzeitschriften meist in englischer Sprache erschienen. Für die Übersicht hier sind diese Fachartikel auf Deutsch und in leicht verständlicher Sprache aufbereitet. Zudem werden ausgehend von den wissenschaftlichen Erkenntnissen Auswirkungen auf das Unterrichten und Lernen abgeleitet.
+Die hier aufbereiteten Erkenntnisse spiegeln Forschungsergebnisse von so genannten systematischen Übersichtsarbeiten (d.h., Forschungssynthesen, Reviews, Metaanalysen) dar. Diese Übersichtsarbeiten sind von verschiedenen Autorinnen und Autoren als Fachartikel erstellt worden und in Fachzeitschriften meist in englischer Sprache erschienen. Für die Übersicht hier sind diese Fachartikel auf Deutsch und in adresssatengerechter Sprache aufbereitet. Zudem werden ausgehend von den wissenschaftlichen Erkenntnissen Implikationen für das Unterrichten und Lernen abgeleitet.
 
 </div>
 
@@ -37,38 +39,39 @@ Die hier aufbereiteten Erkenntnisse spiegeln Forschungsergebnisse von so genannt
 <img src="../www/kachel5.jpg" width="0px">
 <img src="../www/kachel6.jpg" width="0px">
 <img src="../www/kachel7.jpg" width="0px">
-<img src="../www/kachel8.jpg" width="0px">
+<img src="../www/kachel2.jpg" width="0px">
 
 
 Row
 -----------------------------------------------------------------------
 
-### [Arbeiten in Gruppen](#unterstützung-bei-kollaboration) {.transp .kachel1}
-<div class="kacheltextbox">[Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.](#unterstützung-bei-kollaboration)</div>
+### [Arbeiten in Gruppen](#unterstützung-beim-lernen-in-gruppen) {.transp .kachel1}
+<div class="kacheltextbox">[„Computer Supported Collaborative Learning” verwendet digitale Medien, um das Lernen in Gruppen aller Größen zu unterstützen.](#unterstützung-beim-lernen-in-gruppen)</div>
 
-### [Gamification](#Gamification) {.transp .kachel2}
-<div class="kacheltextbox">[Gamification ist die Nutzung von spielerischen Elementen während des Lernens. Gamification führt zu mehr Lernerfolg als ohne spielerische Elemente zu lernen](#gamification)</div>
+### [Gamification](#gamification-1) {.transp .kachel2}
+<div class="kacheltextbox">[Gamification ist die Nutzung von spielerischen Elementen während des Lernens. Gamification führt zu mehr Lernerfolg als ohne spielerische Elemente zu lernen](#gamification-1)</div>
 
-### Text und Bild kombinieren {.transp .kachel3}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+### Text und Bild kombinieren {.transp .kachel5}
+<div class="kacheltextbox">Die Kombination aus Text und Bildinhalten können das Lernen unterstützen. Allerdings müssen sie dazu aufeinander angepasst und klug angeordnet sein.</div>
+
+### [Mobile Geräte im Freien](#mobile-geräte-beim-lernen-im-freien) {.transp .kachel3}
+<div class="kacheltextbox">[Mobile Endgeräte, wie Smartphones oder Tablets, werden dazu genutzt Lerngelegenheiten auf außerhalb des Klassenzimmers zu erweitern.](#mobile-geräte-beim-lernen-im-freien)</div>
+
+
+Row
+-----------------------------------------------------------------------
 
 ### Medienbildung {.transp .kachel4}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+<div class="kacheltextbox">Medienbildung beschreibt das Lernen mit aber auch vor allem über Medien, wie deren kritisch-reflexiver Umgang und bspw. Wissen zu datenschutzrechtlichen Fragen.</div>
 
-Row
------------------------------------------------------------------------
+### Effekte intensiver Nutzung digitaler Medien {.transp .kachel6}
+<div class="kacheltextbox"> Die intensive Nutzung digitaler Medien hat Auswirkungen auf das Selbstvetrauen und Selbstwirksamkeit im Umgang mit digitalen Medien, aber auch auf die Angst vor digitalen Medien.</div>
 
-### Thema x {.transp .kachel5}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+### Digitale Gesundheit {.transp .kachel7}
+<div class="kacheltextbox"> Digitale Gesundheit oder digitales Wohlergehen (engl. "digital well-being") bezieht sich auf die Auswirkungen digitaler Medien auf das Leben.</div>
 
-### Thema x {.transp .kachel6}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
-
-### Thema x {.transp .kachel7}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
-
-### Thema x {.transp .kachel8}
-<div class="kacheltextbox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+### Nutzung komplexer Technologien {.transp .kachel8}
+<div class="kacheltextbox"> Die Nutzung komplexer Technologien, wie Anwendungen von virtuellen oder erweiterten Realitäten ist sehr vielversprechend. Doch sind sie den Aufwand wert?</div>
 
 
 
@@ -81,126 +84,172 @@ Row
 
 
 
-# Unterstützung bei Kollaboration {data-navmenu="Kurzreviews" data-icon="fa-list-alt"}
+# Unterstützung beim Lernen in Gruppen {data-navmenu="Kurzreviews" data-icon="fa-list-alt"}
 
 
 Row {.tabset}
 -----------------------------------------------------------------------
 
-### Das Review {data-width=50}
+### Einführung {data-width=50}
 
-[comment]: <> (This is a comment, it will not be included)
 
 
 <div class="container">
-<div class="box30">
-```{r, fig.width=5}
-####### MAKE MEAN HORIZONTAL LINE ###
-# https://stackoverflow.com/questions/52713272/adding-a-mean-to-geom-density-ridges
+<div class="box30_1">
+</div>
 
 
-data_p <- data.frame(x = c(rnorm(500, 1, 1), rnorm(500, 0, 1)),
-                     gr = c(rep("mit Kollaborationsskripts", 500), rep("ohne Kollaborationsskripts", 500)))
+<div class="box60">
+__Definition: Was ist „Technologieunterstützung beim Lernen in Gruppen“?__  
 
-means_p <- data_p %>%
-  group_by(gr) %>%
-  summarize(xmean = mean(x)) %>%
-  ungroup()
+Das sogenannte „Computer Supported Collaborative Learning” verwendet digitale Medien, um das Lernen in Gruppen aller Größen zu unterstützen. Der Fokus liegt dabei darauf, _welche_ technologische Innovationen _wie_ eingesetzt werden können, um Gruppenlernprozesse, das Teilen von Wissen und die gemeinsame Wissenskonstruktion zu ermöglichen.
+\
+\
 
+__Funktionen für das Unterrichten: Warum „Technologieunterstützung beim Lernen in Gruppen“?__  
 
-p <- ggplot(data_p, aes(x=x, group = gr, fill = gr)) + 
-         geom_segment(aes(x=means_p$xmean[1], y=0, yend=.352, xend=means_p$xmean[1]), color = "#BD700F", size = 2) +
-         geom_segment(aes(x=means_p$xmean[2], y=0, yend=.352, xend=means_p$xmean[2]), color = "#BD222F", size = 2) +
-         geom_density(alpha = 0.5, colour = NA, adjust = 2) +
-         # geom_vline(xintercept = means_p$xmean[1], colour = "#47AEB3") +
-         # geom_vline(xintercept = means_p$xmean[2], colour = "#B36D3E") +
+Es stehen besonders lernförderliche Motivation und Emotionen der Gruppenteilnehmenden beim Lernen im Fokus der Forschung. Diese beeinflussen die Qualität der individuellen Lernprozesse der Schüler*innen. Letztendlich soll mit der Technologieunterstützung beim Lernen in Gruppen der Wissenserwerb und Problemlösekompetenzen gesteigert werden.  
+  
+Neben individuellen Aspekten können auch soziale Prozesse innerhalb der Gruppe angesprochen werden. Technologie soll dabei unterstützen die Rollen in Gruppenarbeiten zu klären oder Aktivitäten/ Beteiligungen sichtbar zu machen. Zudem können computerbasierte Tools dabei unterstützen Peer-Feedback, Diskussionen oder gemeinsame Problemlösestrategien zu strukturieren.  
+  
+Gruppenarbeit ist eine häufig eingesetzte Sozialform im Unterricht. Bisher existierte allerdings noch keine Übersicht, _welche Arten computerbasierter Tools_ zu welchen Effekten beim Lernen in Gruppen führen. Außerdem besteht noch keine systematische Analyse, _welche Strategien der Gruppenarbeit_ durch Technologieunterstützung computerbasiert gefördert werden können.  
+  
+Mit ihrer Metaanalyse diese gehen [Chen, Kirschner und Tsai (2018)](http://doi.org/10.3102/0034654318791584) diese Fragen an.
+\
+
+</div>
+</div>
+
+<div class="box30" style="font-size: 0.7em; font-style: italic; margin-left:5%">
+Photo by <a href="https://unsplash.com/@johnschno?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">John Schnobrich</a> on <a href="https://unsplash.com/s/photos/student-group?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+</div>
+
+### Das Review {data-width=50}
+
+<div class="container">
+
+<div class="box30" style="margin-top:25%">
+```{r, fig.width=5, fig.height=2.5}
+
+ggplot(NULL, aes(x = c(-3, 3))) +
+         stat_function(fun = dnorm,
+                       geom = "area",
+                       fill = "darkgrey",
+                       alpha = .4,
+                       args = list(
+                         mean = 0,
+                         sd = 1)
+                       ) +
+      stat_function(fun = dnorm,
+                       geom = "area",
+                       fill = "#BD700F",
+                       alpha = .5,
+                       args = list(
+                         mean = 0.45,
+                         sd = 1)
+                       ) +
+      scale_x_continuous(labels = c("-", "0", "+"), breaks = c(-2,0,2)) +
          theme_minimal() +
-         scale_fill_manual(values = c("#BD700F", "#BD222F")) +
-         xlab("Punkte im Leistungstest") +
-         ylab("Dichte") +
+         xlab("Leistung im Wissenstest") +
+         ylab("") +
          theme(legend.position = c(0.13, 0.9),
-               legend.background = element_rect(fill=NA, 
+               legend.background = element_rect(fill=NA,           # LEGENDE DEFINIEREN
                                                 size=0.5, 
                                                 colour=NA,
                                                 linetype="solid"),
-               legend.title = element_blank())
+               legend.title = element_blank(),
+               axis.text.y=element_blank())
 
-p
 ```
 </div>
 
 <div class="box60">
+
+
 __Betrachtete Forschungsfrage__   
-"Fördern [Kollaborationsskrips]() die fachliche Leistung von Schülerinnen und Schülern?"
-\
-\
 
-__Was sind Kollaborationsskripts?__    
 
-dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+1. <span style="color:lightgrey;">Welche Auswirkungen hat die Sozialform beim Lernen mit digitalen Medien?</span>
+2. <span style="color:lightgrey;">Welche Auswirkungen hat die Nutzung digitaler Medien beim Lernen in Gruppen?</span> 
+3. Was einsetzen: Welche Arten computerbasierter Tools erzielen welche Effekte?
+4. Wie einsetzen: Welche Strategien der Gruppenarbeit können computerbasiert lernfördernd unterstützt werden?
+
+In unserer Zusammenfassung legen wir den Fokus auf die Forschungsfragen drei und vier.
+
 \
 \
 
 __Untersucht wurden...__   
 
-* insgesamt ... Schülerinnen und Schüler in ... Studien
-* über die Fächer
-  - Deutsch
-  - Mathematik
-  - Physik
+In ihrer Forschungssynthese untersuchten [Chen, Kirschner und Tsai (2018)](http://doi.org/10.3102/0034654318791584)  Lernende von der Grundschule, über Sekundarstufe I und II bis hin zur Hochschule. Letztere bilden in der Studie einen Schwerpunkt, viele der inkludierten Studien wurden auf universitätsebene durchgeführt. Die Lerninhalte deckten ebenfalls eine große Breite ab und erstreckten sich über alle Fächer. Zudem wurden die Studien in unterschiedlichen kulturellen Kontexten durchgeführt, besonders Nordamerika, Asien und Europa.  
+  
+Die Beantwortung der dritten basiert auf insgesamt 7.190, der vierten auf 6.269 Teilnehmenden. 
+\
+\
 
+
+__Die Ergebnisse__  
+Werden computerbasierte Tools beim Lernen in Gruppen eingesetzt, dann kann die Lernleistung der einzelnen Gruppenmitglieder bezüglich des Fachwissens mittelstark und besonders den fokussierten Kompetenzen stark gesteigert werden. Der Einsatz dieser Tools wirkt sich auch positiv auf das Empfinden (z.B. Motivation) der Gruppenmitglieder (schwacher Effekt) und deren Gruppeninteraktionen (schwacher bis mittlerer Effekt) aus. Der Lernerfolg der Gruppe kann so mittelstark gesteigert werden.  
+  
+Gut belegt sind die positiven Auswirkungen von visuelle Repräsentationstools (Concept Maps, Knowledge Maps) und Group Awareness Tools (Group Knowledge Awareness, Group Participation Awareness) auf den individuellen Lernzuwachs im Fachwissen, sowie eine stark positive Auswirkung  auf die Gruppenleistung. Group Awareness Tools gelingt es zudem lernförderliche soziale Interaktionen innerhalb der Gruppe (z.B. #) zu unterstützen. Dies lässt sich auch über ähnlich starke Effekte auf das individuelle Fachwissen weist der Einsatz von Multimediaanwendungen (z.B. Animationen), virtuellen Umgebungen (z.B. Simulationsspiele, Augmented Reality) und computerbasierten tutoriellen Systemen auf.  
+  
+Positive Auswirkungen auf Empfindungen (Emotion, Motivation) der Lernenden sind entweder gering (z.B. durch Group Awareness Tools) oder nur wenig beobachtbar. Ausnahmen bilden hier virtuelle Umgebungen und Onlinediskussionstools (z.B. Video- und Audiokonferenztools), die mittlere positive Auswirkungen erzeugen.  
+  
+Welche Auswirkungen haben rein schriftliche Onlinediskussionstools (z.B. Foren, Chats)? Hier sind die Auswirkungen noch wenig gesichert. Teilweise liegen hier zu wenige Studien vor um eine gesicherte Aussage treffen zu können, teilweise sind die gemessenen Auswirkungen zu unterschiedlich.  
+  
+Zu lernförderlichen Strategien der Gruppenarbeit, die durch digitale Medien unterstützt werden können, zählen sogenannte Kollaborationsskripts. Sie unterstützen beispielsweise die Themenfindung, fokussieren thematisch zielführende Diskussionen und helfen bei der Konsensfindung. Kollaborationsskripts wirken sich positiv auf den Erwerb von Fachwissen, die Gruppenleistung, sowie lernförderliche soziale Interaktionen während der Gruppenarbeit und besonders Kompetenzen (z.B. Argumentationskompetenz) aus.
+Die Auswirkungen computerunterstützten Peerfeedback sind weniger ausführlich untersucht. Es zeigt sich allerdings, dass Peerfeedback sich positiv auf den Fachwissens- und Kompetenzerwerb auswirkt, wenn auch die Erkenntnisse nicht so stark und gut gesichert sind wie für Kollaborationsskripts.
 \
 \
+
 
 __Wie gesichert ist dieses Wissen?__  
 
-Wir stufen die Erkenntnisse aus dem Review als ... ein:
-  
+
 _Überzeugend_ ist...
 
-* Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-* Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-* Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+* dass die Autoren recht strenge Kriterien angelegt haben, welche Studien einbezogen werden. So wurden beispielsweise Studien ausgeschlossen, in denen sich die zu vergleichenden Gruppen von vornherein unterschieden.
 
 \
 
-_Problematisch_ ist...
+_Bei der Interpretation zu bedenken_ ist... 
 
-* Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+*	dass nur publizierte Studien einbezogen wurden. Dies führt wahrscheinlich dazu, dass die Effekte überschätzt werden - eine gesicherte Aussage lässt sich hier aber nicht treffen.
+*	dass die Effekte der einbezogenen Studien mit besonders strengen Methoden (experimentelle und quasi-experimentelle Studien) durchgehend kleiner sind als die der Studien mit weniger strengen Methoden. Dies bedeutet möglicherweise, dass die gemittelten Effektstärken etwas überschätzt sind.
+*	dass die Kontrollgruppen der einbezogenen Studien sich möglicherweise stark unterscheiden. D.h. mit was die computerbasierten Unterstützungstools in den einzelnen Studien verglichen wurden unterscheidet sich und somit auch die Interpretation der Effekststärke.
+*	dass teilweise sich stark unterscheidende Konzepte in einer Kategorie zusammengeführt wurden. So betrachteten Chang et al. die Effekte computerbasierter Unterstützungstools auf „Empfindungen“, worunter sie sowohl Motivation, als auch Emotionen, Einstellungen, Zufriedenheit und weitere Selbsteinschätzungen fassten.
+
+
 
 </div>
 </div>
+
+
 
 ### Implikationen für die Praxis {data-width=25}
 <div class="container">
-<div class="box30">
-```{r, fig.width=5}
-p
-```
-</div>
-
 <div class="box60">
-__Die Ergebnisse__  
-dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-\
-\
 
 __Implikationen__  
-dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Drei zentrale Ergebnisse der Studie sollen hervorgehoben werden:
+
+1.	_„Was?“ I_: Es gibt starke Hinweise darauf, dass die Gruppenleistung durch den Einsatz von visuellen Repräsentationstools (Concept Maps, Knowledge Maps), sowie Group Awareness Tools stark verbessert werden kann.
+2.	_„Was?“ II_: Fachwissen kann durch den Einsatz einer Reihe unterschiedlicher Tools mittelstark gefördert werden: Grafik- oder Multimediaanwendungen (z.B. Animationen), Group Awareness Tools, virtuelle Umgebungen (z.B. Simulationsspiele, Augmented Reality), visuelle Repräsentationstools, computerbasierte tutorielle Systeme. Die Effektstärken unterscheiden hier nur wenig.
+3.	_„Wie?“_: Es bestehen substantielle Hinweise darauf, dass der Einsatz von Computerunterstützung beim Lernen in Gruppen sich für direktere Formen der Instruktion eignet. Die Effekte von Interaktionsskripts (z.B. Kollaborations-, Diskussionsskripts) auf Kompetenzen (z.B. Argumentations-, Problemlösekompetenz) sind stark, auf die Gruppenleistung und lernrelevante soziale Interaktionen und Fachwissen sind sie mittelstark.
 \
 \
-
-__Beispiele__  
-
-* [Link zu Beispiel 1]()
-* [Link zu Beispiel 2]()
-* [Link zu Beispiel 3]()
 
 __Tools__  
 
-* [Link zu Tool 1]()
-* [Link zu Tool 2]()
-* [Link zu Tool 3]()
+* Concept Map: [CmapTools](https://cmap.ihmc.us/cmaptools/) (Download, kostenlos)
+* Mind Map:
+    - [mindmaps.app](https://www.mindmaps.app/) (browserbasiert, kostenlos)
+    - [XMind]( https://www.xmind.net/) (Download, kostenlose Basisversion)
+* Group Awareness Tools: 
+    - Cooperpad (will be on Github soon)
+    - [Participation-tool](https://doi.org/10.1016/j.chb.2010.06.002) (within VCRI)
+    - [Radar und Reflector](https://doi.org/10.1016/j.chb.2010.06.024) (within VCRI)
+
 
 </div>
 </div>
@@ -209,51 +258,40 @@ __Tools__
 Row
 -----------------------------------------------------------------------
 
-### Cohen's $U_3$
+### Anteil der Überlegenheit (Cohen's $U_3$)
 
 ```{r}
-gauge(84, min = 0, max = 100, symbol = '%', gaugeSectors(
+gauge(67, min = 0, max = 100, symbol = '%', gaugeSectors(
   success = c(80, 100), warning = c(40, 79), danger = c(0, 39)
 ))
 ```
-84.1% of the "treatment" group will be above the mean of the "control" group
+67% der Lernenden mit Gamification werden in einem Leistungstest über dem Mittelwert der Lernenden ohne Gamification liegen.
 
-### % Overlap
+### Anteil der Überlappung
 
 ```{r}
-gauge(62, min = 0, max = 100, symbol = "%", gaugeSectors(
-  success = c(41, 50), warning = c(21, 40), danger = c(0, 20)
+gauge(82, min = 0, max = 100, symbol = "%", gaugeSectors(
+  success = c(0, 50), warning = c(51, 85), danger = c(86, 100)
 ))
 ```
-61.7% of the two groups will overlap
+82% der Lernenden in den zwei Gruppen (mit vs. ohne Gamification) werden sich überschneiden.
 
-### Probability of Superiority
+### Wahrscheinlichkeit der Überlegenheit
 
 ```{r}
-gauge(76, min = 0, max = 100, symbol="%", gaugeSectors(
-  success = c(0, 100)
+gauge(63, min = 0, max = 100, symbol="%", gaugeSectors(
+  success = c(53, 100), warning = c(48, 52), danger = c(0, 47)
 ))
 ```
-There is a 76% chance that a person picked at random from the treatment group will have a higher score than a person picked at random from the control group
+Es gibt eine 63% Wahrscheinlichkeit dass eine zufällig ausgewählte Person aus der Gruppe "mit Gamification" besser abschneidet als eine Person aus der Gruppe "ohne Gamification".
 
-### Number Needed to Treat
+### Zu analysierende Personen
 ```{r}
-valueBox(2.8, 
+valueBox(6.8, 
          icon = "fa-user-plus", 
-         caption = "Number needed to treat: In order to have one more favorable outcome in the treatment group compared to the control group, we need to treat 2.8 people on average",
+         caption = "Anzahl der Personen, die mit spielerischen Elementen lernen müssen: Um ein besseres Ergebnis in der Gruppe mit Gamification im Vergleich zur Gruppe ohne Gamification zu erzielen, müssen durschnittlich 6.8 Lernende analysiert werden.",
          color ="#deb787") #18bc9c 
 ```
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Gamification {data-navmenu="Kurzreviews" data-icon="fa-list-alt"}
@@ -261,112 +299,144 @@ valueBox(2.8,
 
 Row {.tabset}
 -----------------------------------------------------------------------
+### Einführung {data-width=50}
+
+<div class="container">
+<div class="box30_2">
+</div>
+
+
+<div class="box60">
+
+__Definition: Was ist Gamification?__  
+
+[Gamification] bezeichnet die Anwendung von spielerischen Elementen innerhalb des Lernens. Dies kann beispielsweise ein Belohnungssystem für die erfolgreiche Erledigung einer Aufgabe, wie das Erspielen von Awards und das Freischalten weiterer Level, eine Fortschrittsanzeige beim Erledigen der Aufgaben oder auch der Wettbewerb mit anderen Lernenden sein. 
+
+\
+
+__Unterricht: Wie kann Gamification im Unterricht genutzt werden?__  
+
+Gamification ist alles - das kurze Quiz zwischendurch bis hin zur mehrwöchigen Projektarbeit. Christian Wettke (https://tridigiwet.com/) stellt in seinem Buch "Gamification im Unterricht - nicht nur Spielerei!" verschiedene Einsatzszenarien vor: „Gamification birgt nach meinen Erlebnissen ein unglaubliches Potential, den eigenen Unterricht zu einem epischen Abenteuer werden zu lassen und mit begeisterten und motivierten Schülerinnen und Schülern auf Augenhöhe zu arbeiten. Natürlich muss man fairerweise sagen, dass das zu Beginn mit einem gewissen Aufwand verbunden ist, der sich aber in der späteren täglichen Arbeit mehr als auszahlt. Man muss dabei auch weder selbst ein Spieler sein noch ein komplettes Spiel entwerfen, sondern bedient sich lediglich an erfolgreichen Spielmechaniken (die übrigens auch von ganz analogen Spielen kommen können) und überträgt sie auf seinen Unterricht. Und sei es auch „nur“ das „Freedom to Fail“-Prinzip, indem man einen Schüler ein Referat nochmal halten (oder eine Klausur nochmal schreiben) lässt, um seine Note zu verbessern.“
+
+\
+
+__Ziel: Warum Gamification?__  
+
+Die Nutzung spielerischer Elemente beim Lernen (bspw. Münzen sammeln durch richtige Antworten) erfreut sich bei Schülerinnen und Schüler großer Beliebtheit. Aus Lehr- Lernpsychologischer Perspektive kann durch die Anwendung verschiedener Elemente aus dem Spiel die Motivation und der Lernerfolg von Schülerinnen und Schüler erhöht werden. Beispielsweise soll die Unterteilung großer Aufgaben in Unteraufgaben mit direktem Feedback und Belohnungen beim Bestehen dazu führen, dass sich die Schülerinnen und Schüler als kompetent in diesem Bereich wahrnehmen. Durch diese positive Kompetenzwahrnehmung kann die Motivation der Schülerinnen und Schüler erhöht werden. Allerdings zeigten bisherige Forschungssynthesen und Studien ein nicht einheitliches Bild in Bezug auf die Wirksamkeit dieser spielerischen Elemente für den Lernerfolg der Lernenden. Daher systematisierte die folgende Forschungssnythese von Shurui Bai, Khe Foon Hew, und Biyun Huang (2020) der Universität Hong-Kong bisherige Befunde.
+</div>
+</div>
+
+<div class="box30" style="font-size: 0.7em; font-style: italic; margin-left:5%">
+<a href="https://www.flickr.com/photos/47036738@N06/19819155226">"Turning Students Into Players: How Gamification Is Improving Education"</a><span> by <a href="https://www.flickr.com/photos/47036738@N06">Samsung Newsroom</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC-SA 2.0</a><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=2d3573b8-19ec-422e-a8ae-df0f30c8bdc4" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a>
+</div>
 
 ### Das Review {data-width=50}
 
 <div class="container">
-<div class="box30">
-```{r, fig.width=5}
-####### MAKE MEAN HORIZONTAL LINE ###
-# https://stackoverflow.com/questions/52713272/adding-a-mean-to-geom-density-ridges
 
+<div class="box30" style="margin-top: 17%;">
+```{r, fig.width=5, fig.height=2.5}
 
-data_p <- data.frame(x = c(rnorm(500, 1, 1), rnorm(500, 0, 1)),
-                     gr = c(rep("mit Gamification", 500), rep("ohne Gamification", 500)))
-
-means_p <- data_p %>%
-  group_by(gr) %>%
-  summarize(xmean = mean(x)) %>%
-  ungroup()
-
-
-p <- ggplot(data_p, aes(x=x, group = gr, fill = gr)) + 
-         geom_segment(aes(x=means_p$xmean[1], y=0, yend=.352, xend=means_p$xmean[1]), color = "#BD700F", size = 2) +
-         geom_segment(aes(x=means_p$xmean[2], y=0, yend=.352, xend=means_p$xmean[2]), color = "#BD222F", size = 2) +
-         geom_density(alpha = 0.5, colour = NA, adjust = 2) +
-         # geom_vline(xintercept = means_p$xmean[1], colour = "#47AEB3") +
-         # geom_vline(xintercept = means_p$xmean[2], colour = "#B36D3E") +
+ggplot(NULL, aes(x = c(-3, 3))) +
+         stat_function(fun = dnorm,
+                       geom = "area",
+                       fill = "darkgrey",
+                       alpha = .4,
+                       args = list(
+                         mean = 0,
+                         sd = 1)
+                       ) +
+      stat_function(fun = dnorm,
+                       geom = "area",
+                       fill = "#BD700F",
+                       alpha = .5,
+                       args = list(
+                         mean = 0.51,
+                         sd = 1)
+                       ) +
+      scale_x_continuous(labels = c("-", "0", "+"), breaks = c(-2,0,2)) +
          theme_minimal() +
-         scale_fill_manual(values = c("#BD700F", "#BD222F")) +
-         xlab("Punkte im Leistungstest") +
-         ylab("Dichte") +
+         xlab("Leistung im Wissenstest") +
+         ylab("") +
          theme(legend.position = c(0.13, 0.9),
-               legend.background = element_rect(fill=NA, 
+               legend.background = element_rect(fill=NA,           # LEGENDE DEFINIEREN
                                                 size=0.5, 
                                                 colour=NA,
                                                 linetype="solid"),
-               legend.title = element_blank())
+               legend.title = element_blank(),
+               axis.text.y=element_blank())
 
-p
 ```
 </div>
 
 <div class="box60">
+
+
 __Betrachtete Forschungsfrage__   
 "Fördert ein spielerischer Zugang zu Lerninhalten, d.h., [Gamification](), die fachliche Leistung von Schülerinnen und Schülern?"
-"Welche Elemente von [Gamification]() sind besonders lernförderlich?"
+„Welche Elemente von [Gamification] (bspw. Feedback bekommen, Ziele setzen) nehmen Lernende als besonders positiv bzw. negativ wahr?“
 \
 \
 
 __Untersucht wurden...__   
 
-Insgesamt wurden 3202 Lernende untersucht. Das waren sowohl Schülerinnen und Schüler als auch Studierende von Universitäten. Die Studien wurden sowohl im Bereich des Erlernens von Sprachen als auch im Informatikbereich durchgeführt. Innerhalb der Studien haben die Lernenden 4 – 12 Wochen mit den spielerischen Elementen gelernt.
+Insgesamt wurden 3202 Lernende untersucht. Das waren sowohl Schülerinnen und Schüler als auch Studierende von Universitäten. Die berücksichtigten Studien wurden vor allem im Bereich des Erlernens von Sprachen und im Informatikbereich durchgeführt. Innerhalb der Studien haben die Lernenden 4 – 12 Wochen mit den spielerischen Elementen gelernt. Die Hälfte der Studien wurde im asiatischen Raum durchgeführt und die restlichen Studien in (Nord- und Süd) Amerika und Europa.
+\
+\
 
-\
-\
 __Die Ergebnisse__  
-Über alle Studien hinweg zeigte sich, dass Lernende die spielerischen Elemente anwendeten während des Lernens signifikant mehr lernten als Lernende die ohne spielerische Elemente lernten. Weitere Analysen zeigten, dass die Länge der Lerneinheiten mit spielerischen Elementen entscheidend für deren Erfolg war. Die Lerneinheiten mit spielerischen Elementen, die eine Dauer von 1 – 3 Monaten hatten zeigten den größten Unterschied im Lernerfolg zu Lerneinheiten ohne spielerische Elemente in der gleichen Dauer. Allerdings machte weder die Art der spielerischen Elemente noch die Anzahl der Elemente einen Unterschied. Zudem zeigte eine Auswertung von Interviews und Eindrücken von Lernenden, dass die spielerischen Elemente dazu führten, dass Lernende lieber lernten und vor allem die Rückmeldung zu ihrem Lernstand wie auch die daraus entstehende Wertschätzung mochten. Weiterhin regten sie die spielerischen Elemente dazu an höhere Ziele zu setzen und mehr Aufgaben zu erledigen. Allerdings muss den Lernenden die Nützlichkeit der spielerischen Elemente bewusst gemacht werden und eine Belohnung direkt nach Erreichung eines Ziels gegeben werden. Zudem sollte darauf geachtet werden, dass keine Ängste oder Neid unter den Lernenden entsteht.
+Über alle Studien hinweg zeigte sich, dass Lernende, die spielerischen Elemente anwendeten während des Lernens, signifikant mehr lernten als Lernende, die ohne spielerische Elemente lernten. Weitere Analysen zeigten, dass die Länge der Lerneinheiten mit spielerischen Elementen entscheidend für deren Erfolg war. Die Lerneinheiten mit spielerischen Elementen, die eine Dauer von 1 – 3 Monaten hatten zeigten den größten Unterschied im Lernerfolg zu Lerneinheiten ohne spielerische Elemente in der gleichen Dauer. Allerdings machte weder die Art der spielerischen Elemente noch die Anzahl der Elemente einen Unterschied.  
+Zudem zeigte eine Auswertung von Interviews und Eindrücken von Lernenden, dass die spielerischen Elemente dazu führten, dass Lernende lieber lernten und vor allem die Rückmeldung zu ihrem Lernstand wie auch die daraus entstehende Wertschätzung mochten. Weiterhin regten sie die spielerischen Elemente dazu an höhere Ziele zu setzen und mehr Aufgaben zu erledigen. Allerdings muss den Lernenden die Nützlichkeit der spielerischen Elemente bewusst gemacht werden und eine Belohnung direkt nach Erreichung eines Ziels gegeben werden. Zudem sollte darauf geachtet werden, dass keine Ängste oder Neid unter den Lernenden entsteht.
+
 \
 \
 
 
 __Wie gesichert ist dieses Wissen?__  
 
-Wir stufen die Erkenntnisse aus dem Review als gesichert ein:
-  
+
 _Überzeugend_ ist...
 
-* dass die einzelnen aufgenommenen Studien eine hohe Qualität aufweisen.
-* dass neben quantitativen Studien auch qualitative Studien synthetisiert wurden
+* dass die Autoren der Forschungssynthese sehr strenge Qualitätskriterien für die einzelnen Studien angewendet haben und daher die aufgenommenen Studien eine hohe Qualität aufweisen.
+* dass sichergestellt wurde, dass keine Verzerrung der Ergebnisse beispielsweise durch eine mögliche Bevorzugung statistisch signifikanter Studien, entstand.
+* dass die Autoren transparent beschrieben haben welche Studien sie aufgenommen haben und wie diese Studien aufgebaut waren.
+* dass neben quantitativen Studien auch qualitative Studien berücksichtigt wurden und so der aktuelle Forschungsstand zu Gamification umfassend abgebildet wurde.
+
 
 
 \
 
-_Problematisch_ ist...
+_Bei der Interpretation zu bedenken_ ist...
 
 * dass die Wirkmechanismen von spielerischen Elementen in einzelnen Fächer aufgrund der geringen empirischen Basis nicht differenziert betrachtet werden konnten.
+* dass die Hälfte der aufgenommenen Studien im asiatischen Kontext durchgeführt wurden und somit die Übertragbarkeit auf das deutsche Bildungssystem geprüft werden muss.
+
 
 </div>
 </div>
 
-### Implikationen für die Praxis {data-width=25}
+
+
+### Implikationen für die Praxis {data-width=50}
 <div class="container">
-<div class="box30">
-```{r, fig.width=5}
-p
-```
-</div>
-
 <div class="box60">
 
 __Implikationen__  
-Diese Analysen zeigen, dass das Lernen mit spielerischen Elementen dem Lernen ohne diese Elemente überlegen ist. Insbesondere scheinen mittellange Lerneinheiten besonders wirksam zu sein. Zudem scheint die Anzahl der spielerischen Elemente nicht entscheidend zu sein, aber die Passung dieser Elemente mit der jeweiligen Aufgabe. Eine mögliche Belohnung oder Rückmeldung sollte daher direkt nach der Erledigung der Aufgabe gezeigt werden.
+
+1. Die Forschungssynthese zeigte, dass das Lernen mit spielerischen Elementen dem Lernen ohne diese Elemente mit einem mittleren Effekt überlegen ist. Insbesondere scheinen mittellange Lerneinheiten wirksam zu sein. 
+
+2. Die Anzahl der spielerischen Elemente scheint nicht entscheidend zu sein, aber die Passung dieser Elemente mit der jeweiligen Aufgabe. Beispielsweise sollte eine mögliche Belohnung oder Rückmeldung direkt nach der Erledigung der Aufgabe gezeigt werden.
 \
 \
 
-__Beispiele__  
-
-* [Link zu Beispiel 1]()
-* [Link zu Beispiel 2]()
-* [Link zu Beispiel 3]()
-\
-\
 
 __Tools__  
 
-* [Link zu Tool 1]()
-* [Link zu Tool 2]()
-* [Link zu Tool 3]()
+Mehr Informationen und konkrete digitale Anwendungen:  
+\
+
+* [für die Gesellschaftswissenschaften](https://vitruv.uni-tuebingen.de/ilias3/goto.php?target=wiki_wpage_817)  
+* [für die Geisteswissenschaften](https://vitruv.uni-tuebingen.de/ilias3/goto.php?target=wiki_wpage_819) 
 
 </div>
 </div>
@@ -375,63 +445,202 @@ __Tools__
 Row
 -----------------------------------------------------------------------
 
-### Cohen's $U_3$
+### Anteil der Überlegenheit (Cohen's $U_3$)
 
 ```{r}
-gauge(84, min = 0, max = 100, symbol = '%', gaugeSectors(
+gauge(69, min = 0, max = 100, symbol = '%', gaugeSectors(
   success = c(80, 100), warning = c(40, 79), danger = c(0, 39)
 ))
 ```
-84.1% of the "treatment" group will be above the mean of the "control" group
+69.5% der Lernenden mit Gamification werden in einem Leistungstest über dem Mittelwert der Lernenden ohne Gamification liegen.
 
-### % Overlap
+### Anteil der Überlappung
 
 ```{r}
-gauge(62, min = 0, max = 100, symbol = "%", gaugeSectors(
-  success = c(41, 50), warning = c(21, 40), danger = c(0, 20)
+gauge(80, min = 0, max = 100, symbol = "%", gaugeSectors(
+  success = c(0, 50), warning = c(51, 85), danger = c(86, 100)
 ))
 ```
-61.7% of the two groups will overlap
+79.9% der Lernenden in den zwei Gruppen (mit vs. ohne Gamification) werden sich überschneiden.
 
-### Probability of Superiority
+### Wahrscheinlichkeit der Überlegenheit
 
 ```{r}
-gauge(76, min = 0, max = 100, symbol="%", gaugeSectors(
-  success = c(0, 100)
+gauge(64, min = 0, max = 100, symbol="%", gaugeSectors(
+  success = c(53, 100), warning = c(48, 52), danger = c(0, 47)
 ))
 ```
-There is a 76% chance that a person picked at random from the treatment group will have a higher score than a person picked at random from the control group
+Es gibt eine 64.1 % Wahrscheinlichkeit dass eine zufällig ausgewählte Person aus der Gruppe "mit Gamification" besser abschneidet als eine Person aus der Gruppe "ohne Gamification".
 
-### Number Needed to Treat
+### Zu analysierende Personen
 ```{r}
-valueBox(2.8, 
+valueBox(5.9, 
          icon = "fa-user-plus", 
-         caption = "Number needed to treat: In order to have one more favorable outcome in the treatment group compared to the control group, we need to treat 2.8 people on average",
+         caption = "Anzahl der Personen, die mit spielerischen Elementen lernen müssen: Um ein besseres Ergebnis in der Gruppe mit Gamification im Vergleich zur Gruppe ohne Gamification zu erzielen, müssen durschnittlich 5.8 Lernende analysiert werden.",
          color ="#deb787") #18bc9c 
 ```
 
 
 
+# Mobile Geräte beim Lernen im Freien {data-navmenu="Kurzreviews" data-icon="fa-list-alt"}
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### Einführung {data-width=50}
+
+<div class="container">
+
+<div class="box30_3">
+</div>
+
+<div class="box60">
+
+__Definition: Was ist der „Einsatz mobiler Endgeräte für das Lernen im Freien“?__  
+
+Mobile Endgeräte, wie Smartphones oder Tablets, werden dazu genutzt Lerngelegenheiten auf außerhalb des Klassenzimmers zu erweitern. Der Fokus liegt hierbei meist auf der Unterstützung selbstregulierten, forschenden Lernens in den MINT Fächern, besonders den Naturwissenschaften. Schülerinnen und Schüler begeben sich dabei meist in Kleingruppen mit ihren mobilen Geräten und entsprechenden Applikationen in die Natur, für die Erarbeitung oder Ergebnissicherung bezüglich eines abgegrenzten Lerninhalts.
+\
+
+__Funktionen für das Unterrichten: Warum mobile Endgeräte beim Lernen im Freien einsetzen?__  
+
+Es stehen besonders lernförderliche Motivation und Emotionen der Gruppenteilnehmenden beim Lernen im Fokus Untersucht werden Möglichkeiten der Bereitstellung und Förderung von Fachwissen über die mobilen Geräte. Zudem wird das selbstregulierte Lernen unterstützt, indem forschendes Lernen angeleitet wird. Dazu zählt das Aufstellen von Hypothesen, das Dokumentieren von Beobachtungen, sowie die Sammlung und Interpretation von Daten. Auch Kommunikation und Kollaboration zwischen den Gruppenmitgliedern können über mobile Geräte angeleitet werden. Nicht zuletzt können durch die mobilen Geräte Lernstände und Daten des Lernprozesses erfasst werden.  
+  
+Mobile Endgeräte für das Lernen im Freien einzusetzen ist ein verhältnismäßig neuer Ansatz. Entsprechend ist es noch recht unklar, wofür und wie mobile Geräte eingesetzt werden können. Hierzu gibt es erste Studien, für die [Kilty und Burrows (2020)](http://doi.org/10.4018/IJMBL.2020040103) in ihrem systematischen Review eine Übersicht erstellt haben.
+
+</div>
+</div>
+
+<div class="box30" style="font-size: 0.7em; font-style: italic; margin-left:5%">
+Photo by <a href="https://unsplash.com/@ozgomz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Oziel Gómez</a> on <a href="https://unsplash.com/s/photos/tablet-nature?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+</div>
+
+
+### Das Review {data-width=50}
+
+<div class="container">
+
+<div class="box30" style="margin-top:24%">
+_Tabelle 1: Prozentuale Häufigkeiten der lernrelevanten Aspekte, die als Lernziel formuliert, mit mobilen Geräten unterstützt oder diagnostiziert wurden._  
+![](../www/mobil-im-freien-tab.jpg){width=100%}
+</div>
+
+<div class="box60">
+
+
+__Betrachtete Forschungsfrage__   
+
+
+1.	<span style="color:grey;">Welche Lernziele werden für das Lernen im Freien formuliert?</span>
+2.	Wofür werden mobile Geräte beim Lernen im Freien eingesetzt?
+3.	<span style="color:grey;">Was wird mit Hilfe der mobilen Geräte bei den Schülerinnen und Schülern diagnostiziert?</span>
+
+Wir werden uns besonders auf die zweite Forschungsfrage konzentrieren.
+
+
+\
+\
+
+__Untersucht wurden...__   
+
+In ihrer Forschungssynthese untersuchten [Kilty und Burrows (2020)](http://doi.org/10.4018/IJMBL.2020040103) Schülerinnen und Schüler aller Klassenstufen, sowie Studierende, die genaue Gesamtzahl der Lernenden wird nicht genannt. Die Synthese basiert auf 45 Einzelstudien.
+
+\
+\
+
+
+__Die Ergebnisse__  
+Im Fokus der Studie standen die lernrelevanten Aspekte:
+
+*	Fachwissen der Schülerinnen und Schüler
+*	Prozesse des forschenden Lernens
+  -	Fragen-/ Hypothesenentwicklung
+  -	Dokumentation von Beobachtungen
+  -	Sammlung von Daten
+  -	Interpretation von Daten
+  -	Kommunikation und Kollaboration zwischen Gruppenmitgliedern bzw. der Klasse
+*	Emotionen, Motivation beim Lernen
+
+Mobile Geräte wurden meist zur Bereitstellung von Fachwissen verwendet. Beispielsweise scannen Schülerinnen und Schüler neben Pflanzen ausgewiesene QR-Codes in botanischen Gärten und erhalten so weitere Informationen oder eine zusätzliche 3D Projektion auf den Bildschirm. Eine weitere gelungene Einsatzmöglichkeit mobiler Geräte ist die Anleitung und Dokumentation von Beobachtungen, sowie die Sammlung von Daten. Beispielsweise wurden Smartphones anhand von GPS Koordinaten zum Auffinden von Lernorten, eingesetzt. Dort erhielten die Schülerinnen und Schüler Aufforderungen und Anleitungen zur Dokumentation von Merkmalen, wie selbst generierten Messdaten oder entdeckte Tiere in schriftlicher und gezeichneter Form. Auch bei der Interpretation von Daten können mobile Geräte unterstützen, indem sie automatisiertes Feedback auf eingegebene Messdaten bereitstellen. Sind Messwerte beispielsweise ungewöhnlich hoch oder niedrig, so kann eine Wiederholungsmessung vorgeschlagen und eine nochmalige Anleitung des Messinstruments bereitgestellt werden. Mobile Geräte werden bisher noch wenig dafür verwendet, die Schülerinnen und Schüler dabei zu unterstützen Fragen bzw. Hypothesen für das forschende Lernen zu entwickeln.
+\
+\
+
+
+__Wie gesichert ist dieses Wissen?__  
+
+
+_Überzeugend_ ist...
+
+* dass der Einbezug oder Ausschluss von Einzelstudien eindeutig anhand klarer Kriterien geregelt wurde. Dies ist ein Hinweis darauf, dass ein großer Teil der relevanten Studien auch berücksichtigt werden konnte.
+
+\
+
+_Bei der Interpretation zu bedenken_ ist... 
+
+* dass keine genauere Differenzierung bezüglich Klassenstufen vorgenommen wurde. Das selbstregulierte, forschende Lernen kann sich stark zwischen unterschiedlichen Klassenstufen unterscheiden. Hier wäre eine weitere Differenzierung möglich gewesen.
 
 
 
+</div>
+</div>
 
 
 
+### Implikationen für die Praxis {data-width=25}
+<div class="container">
+<div class="box60">
+
+__Implikationen__  
+Die Studie liefert eine erste Übersicht darüber, wofür mobile Geräte beim Lernen im Freien eingesetzt werden können. Zusammenfassend weisen die Autorinnendarauf hin, dass die Lernziele, der Einsatz mobiler Geräte und eine Lernstands- oder Lernprozessdiagnose wenn möglich von vornherein zusammen gedacht werden sollten. Applikationen, die den Lernprozess unterstützen oder zur Lernstands- bzw. Lernprozessdiagnose eingesetzt werden können sehen Sie unten.
+
+
+__Tools__  
+
+* Pflanzenbestimmung per App: [Plantnet](https://plantnet.org/en/)
+
+
+</div>
+</div>
 
 
 
-
-# Wie entsteht ein Kurzreview? {data-navmenu="About" data-icon="fa-question-circle"}
-
+# Wie entsteht eine Zusammenfassung? {data-navmenu="About" data-icon="fa-question-circle"}
 
 
+_Wie entsteht eine Zusammenfassung?_
+
+Bis eine Zusammenfassung auf dieser Plattform erscheint, durchlaufen die Originalartikel wie auch deren Zusammenfassung ein mehrstufiger Prozess.
 
 
 
+1) In regelmäßigen Abständen werden aktuelle Forschungssynthesen aus den gängigen wissenschaftlichen Datenbanken zu den Themen "Unterrichten und Lernen mit digitalen Medien" extrahiert [Suchterm: technology AND learning AND school AND (reviews OR meta-analysis); 2018 - heute].
+
+2) Im zweiten Schritt werden die so gefundenen Forschungssynthesen hinsichtlich ihrer thematischen Passung und Qualität ausgewählt.
+
+3) Im dritten Schritt werden einzelne Forschungssynthesen von einem/r Wissenschaftler/in gründlich gelesen und aufbereitet.
+
+4) Dieser erste Prototyp wird unter Wissenschaftler/innen diskutiert und vor allem hinsichtlich der Qualität der Originialforschungssynthese kritisch geprüft.
+
+5) Danach wird an einem 2. Prototypen gearbeitet, der innerhalb eines Expert/innengremiums aus Lehrerbilnder/innen hinischtlich der Verständlichkeit diskutiert wird.
+
+6) Die daraus entstandenen Änderungen werden eingearbeitet und in die vorliegende Plattform eingebettet.
+
+7) Der Aufbau auf Makro- und Mikrostruktur dieser Plattform ist Gegenstand empirischer Forschung.
 
 
 
 
 # Autor\*innen und Projekt {data-navmenu="About" data-icon="fa-university"}
+
+
+
+_Autor/innen und Projekt_
+
+
+Dies ist ein Projekt innerhalb von Digitalisierung in der Lehrerbildung Tübingen (TüDiLB) Zentrum für Forschung und Transfer. Ein Verbund der Universität Tübingen und des Leibniz-Instituts für Wissensmedien (https://www.tuedilb-tuebingen.de/.
+
+Innerhalb von TüDiLB versuchen wir, forschungsbasierte Antworten auf diese Fragen zu geben. Dazu bündeln wir Forschungs- und Transferaktivitäten im Bereich Digitalisierung in der Lehrerbildung am Standort Tübingen und bereiten aktuelle digitalisierungsbezogene Forschungsergebnisse für Lehrpersonen und Akteure der verschiedenen Phasen der Lehrerbildung auf.
+
+Verantwortliche Autor*innen sind Dr. Jürgen Schneider und Dr. Iris Backfisch (https://www.tuedilb-tuebingen.de/personen.html).
+
+„Das diesem Angebot zugrundeliegende Vorhaben wird im Rahmen der gemeinsamen „Qualitätsoffensive Lehrerbildung“ von Bund und Ländern mit Mitteln des Bundesministeriums für Bildung und Forschung unter dem Förderkennzeichen 01JA2009 gefördert. Die Verantwortung für den Inhalt dieser Veröffentlichung liegt bei den Autor*innen.“
 

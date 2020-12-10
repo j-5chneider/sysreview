@@ -1,4 +1,5 @@
 /* collapsable sources with buttons */
+/*
 .collapse.in {
   background-color: #f6f6f6;
 }
@@ -10,9 +11,10 @@ button {
 thead {
   background-color: #f6f6f6;
 }
-
+*/
 
 /* Styling headers */
+/*
 th {
   background-color: #f6f6f6 !important;
 }
@@ -20,9 +22,10 @@ th {
 h1 {
   margin: 50px 0 0 -50px !important;
 }
-
+*/
 
 /* Table of Contents*/
+/*
 .tocify-subheader>li {
   background-color: #f6f6f6;
   border-bottom: solid 1px #ececec;
@@ -37,6 +40,7 @@ h1 {
     text-indent: -20px !important;
     padding-left: 0 !important;
 }
+*/
 
 /* TRANSLATE REVIEW DOC */
 /* third level header */
@@ -45,6 +49,7 @@ h1 {
   font-weight: bold;
   font-size: 1.2em;
 }
+
 
 /* navbar
 .navbar {
@@ -70,10 +75,13 @@ change a height of a standard Bootstrap navbar.
   min-height: 40px;
 }
 
+/* change the Title Logo & Font */
 .navbar-brand {
   padding: 0 15px;
   height: 40px;
   line-height: 40px;
+  color: #FFC814 !important;
+  font-weight: bold;
 }
 
 .navbar-toggle {
@@ -166,11 +174,6 @@ change a height of a standard Bootstrap navbar.
   text-align:center;
 }
 
-
-/* PREREG Ränder links und rechts */
-.section.level1.vertical-layout-fill.dashboard-row-orientation {
-  margin: 0 5% 0 5% !important;
-}
 
 /* divs for review row design */
 .container {

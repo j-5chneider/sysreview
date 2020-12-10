@@ -1,11 +1,12 @@
 ---
-title: "TüDiLB-TT"
+title: "TüDi-BASE"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
     vertical_layout: fill
     theme: flatly
     self_contained: true
+    logo: ../www/shelf_y.png
 css: ../www/style.css
 editor_options: 
   chunk_output_type: console
@@ -131,7 +132,7 @@ Photo by <a href="https://unsplash.com/@johnschno?utm_source=unsplash&amp;utm_me
 <div class="box30" style="margin-top:25%">
 ```{r, fig.width=5, fig.height=2.5}
 
-ggplot(NULL, aes(x = c(-3, 3))) +
+ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
          stat_function(fun = dnorm,
                        geom = "area",
                        fill = "darkgrey",
@@ -310,7 +311,7 @@ Row {.tabset}
 
 __Definition: Was ist Gamification?__  
 
-[Gamification] bezeichnet die Anwendung von spielerischen Elementen innerhalb des Lernens. Dies kann beispielsweise ein Belohnungssystem für die erfolgreiche Erledigung einer Aufgabe, wie das Erspielen von Awards und das Freischalten weiterer Level, eine Fortschrittsanzeige beim Erledigen der Aufgaben oder auch der Wettbewerb mit anderen Lernenden sein. 
+[Gamification] bezeichnet die Anwendung von spielerischen Elementen innerhalb des Lernens. Dies kann beispielsweise ein Belohnungssystem für die erfolgreiche Erledigung einer Aufgabe wie das Erspielen von Awards und das Freischalten weiterer Level, eine Fortschrittsanzeige beim Erledigen der Aufgaben oder auch der Wettbewerb mit anderen Lernenden sein. 
 
 \
 
@@ -322,7 +323,7 @@ Gamification ist alles - das kurze Quiz zwischendurch bis hin zur mehrwöchigen 
 
 __Ziel: Warum Gamification?__  
 
-Die Nutzung spielerischer Elemente beim Lernen (bspw. Münzen sammeln durch richtige Antworten) erfreut sich bei Schülerinnen und Schüler großer Beliebtheit. Aus Lehr- Lernpsychologischer Perspektive kann durch die Anwendung verschiedener Elemente aus dem Spiel die Motivation und der Lernerfolg von Schülerinnen und Schüler erhöht werden. Beispielsweise soll die Unterteilung großer Aufgaben in Unteraufgaben mit direktem Feedback und Belohnungen beim Bestehen dazu führen, dass sich die Schülerinnen und Schüler als kompetent in diesem Bereich wahrnehmen. Durch diese positive Kompetenzwahrnehmung kann die Motivation der Schülerinnen und Schüler erhöht werden. Allerdings zeigten bisherige Forschungssynthesen und Studien ein nicht einheitliches Bild in Bezug auf die Wirksamkeit dieser spielerischen Elemente für den Lernerfolg der Lernenden. Daher systematisierte die folgende Forschungssnythese von Shurui Bai, Khe Foon Hew, und Biyun Huang (2020) der Universität Hong-Kong bisherige Befunde.
+Die Nutzung spielerischer Elemente beim Lernen (bspw. Münzen sammeln durch richtige Antworten) erfreut sich bei Schülerinnen und Schülern großer Beliebtheit. Aus lehr- lernpsychologischer Perspektive kann durch die Anwendung verschiedener Elemente aus dem Spiel die Motivation und der Lernerfolg von Schülerinnen und Schülern erhöht werden. Beispielsweise soll die Unterteilung großer Aufgaben in Unteraufgaben mit direktem Feedback und Belohnungen beim Bestehen dazu führen, dass sich die Schülerinnen und Schüler als kompetent in diesem Bereich wahrnehmen. Durch diese positive Kompetenzwahrnehmung kann die Motivation der Schülerinnen und Schüler erhöht werden. Allerdings zeigten bisherige Forschungssynthesen und Studien ein nicht einheitliches Bild in Bezug auf die Wirksamkeit dieser spielerischen Elemente für den Lernerfolg der Lernenden. Daher systematisierte die folgende Forschungssnythese von Shurui Bai, Khe Foon Hew, und Biyun Huang (2020) der Universität Hong-Kong bisherige Befunde.
 </div>
 </div>
 
@@ -337,7 +338,7 @@ Die Nutzung spielerischer Elemente beim Lernen (bspw. Münzen sammeln durch rich
 <div class="box30" style="margin-top: 17%;">
 ```{r, fig.width=5, fig.height=2.5}
 
-ggplot(NULL, aes(x = c(-3, 3))) +
+ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
          stat_function(fun = dnorm,
                        geom = "area",
                        fill = "darkgrey",
@@ -373,20 +374,21 @@ ggplot(NULL, aes(x = c(-3, 3))) +
 
 
 __Betrachtete Forschungsfrage__   
-"Fördert ein spielerischer Zugang zu Lerninhalten, d.h., [Gamification](), die fachliche Leistung von Schülerinnen und Schülern?"
-„Welche Elemente von [Gamification] (bspw. Feedback bekommen, Ziele setzen) nehmen Lernende als besonders positiv bzw. negativ wahr?“
+"Fördert ein spielerischer Zugang zu Lerninhalten, d.h. [Gamification]() die fachliche Leistung von Schülerinnen und Schülern?" <br>
+"Welche Elemente von [Gamification] (bspw. Feedback bekommen, Ziele setzen) nehmen Lernende als besonders positiv bzw. negativ wahr?"
 \
 \
 
-__Untersucht wurden...__   
+__Betrachtete Studien__   
 
-Insgesamt wurden 3202 Lernende untersucht. Das waren sowohl Schülerinnen und Schüler als auch Studierende von Universitäten. Die berücksichtigten Studien wurden vor allem im Bereich des Erlernens von Sprachen und im Informatikbereich durchgeführt. Innerhalb der Studien haben die Lernenden 4 – 12 Wochen mit den spielerischen Elementen gelernt. Die Hälfte der Studien wurde im asiatischen Raum durchgeführt und die restlichen Studien in (Nord- und Süd) Amerika und Europa.
+Zuerst wurden 24 Studien mit insgesamt 3202 Lernenden untersucht. In diesen Studien wurden jeweils Lernende, die mit spielerischen Elementen gelernt haben, mit Lernenden verglichen, die ohne diese Elemente lernten. Zudem wurden 32 weitere Studien analysiert, in denen Lernende zu ihren Eindrücken zum Lernen mit spielerischen Elementen in Interviews befragt wurden. Insgesamt nahmen sowohl Schülerinnen und Schüler als auch Studierende von Universitäten an den Studien teil. Die berücksichtigten Studien wurden vor allem im Bereich des Erlernens von Sprachen und im Informatikbereich durchgeführt. Innerhalb der Studien haben die Lernenden 4 – 12 Wochen mit den spielerischen Elementen gelernt. Die Hälfte der Studien wurde im asiatischen Raum durchgeführt und die restlichen Studien in (Nord- und Süd) Amerika und Europa.
 \
 \
 
 __Die Ergebnisse__  
-Über alle Studien hinweg zeigte sich, dass Lernende, die spielerischen Elemente anwendeten während des Lernens, signifikant mehr lernten als Lernende, die ohne spielerische Elemente lernten. Weitere Analysen zeigten, dass die Länge der Lerneinheiten mit spielerischen Elementen entscheidend für deren Erfolg war. Die Lerneinheiten mit spielerischen Elementen, die eine Dauer von 1 – 3 Monaten hatten zeigten den größten Unterschied im Lernerfolg zu Lerneinheiten ohne spielerische Elemente in der gleichen Dauer. Allerdings machte weder die Art der spielerischen Elemente noch die Anzahl der Elemente einen Unterschied.  
-Zudem zeigte eine Auswertung von Interviews und Eindrücken von Lernenden, dass die spielerischen Elemente dazu führten, dass Lernende lieber lernten und vor allem die Rückmeldung zu ihrem Lernstand wie auch die daraus entstehende Wertschätzung mochten. Weiterhin regten sie die spielerischen Elemente dazu an höhere Ziele zu setzen und mehr Aufgaben zu erledigen. Allerdings muss den Lernenden die Nützlichkeit der spielerischen Elemente bewusst gemacht werden und eine Belohnung direkt nach Erreichung eines Ziels gegeben werden. Zudem sollte darauf geachtet werden, dass keine Ängste oder Neid unter den Lernenden entsteht.
+Über alle Studien hinweg zeigte sich, dass Lernende, die während des Lernens spielerische Elemente anwendeten, signifikant mehr lernten als Lernende, die ohne spielerische Elemente lernten. Weitere Analysen zeigten, dass die Länge der Lerneinheiten mit spielerischen Elementen entscheidend für deren Erfolg war. Die Lerneinheiten mit spielerischen Elementen, die eine Dauer von 1 – 3 Monaten hatten, zeigten den größten Unterschied im Lernerfolg zu Lerneinheiten ohne spielerische Elemente in der gleichen Dauer. Allerdings machte weder die Art der spielerischen Elemente (bspw. Münzen sammeln, Fortschrittsbalken) noch die Anzahl dieser Elemente innerhalb einer Lerneinheit einen Unterschied. <br> 
+Zudem zeigte eine Auswertung von Interviews und Eindrücken von Lernenden, dass die spielerischen Elemente dazu führten, dass Lernende lieber lernten und vor allem die Rückmeldung zu ihrem Lernstand wie auch die daraus entstehende Wertschätzung mochten. Weiterhin berichteten die Lernenden, dass sie durch die spielerischen Elemente dazu angeregt wurden, höhere Ziele zu setzen und mehr Aufgaben zu erledigen. <br> 
+Die Autor*innen leiten aus ihren Analysen ab, dass es besonders wichtig ist, den Lernenden die Nützlichkeit der spielerischen Elemente bewusst zu machen und eine Belohnung direkt nach Erreichung eines Ziels zu geben. Zudem sollte darauf geachtet werden, dass keine Ängste oder Neid unter den Lernenden entsteht.
 
 \
 \
@@ -395,20 +397,20 @@ Zudem zeigte eine Auswertung von Interviews und Eindrücken von Lernenden, dass 
 __Wie gesichert ist dieses Wissen?__  
 
 
-_Überzeugend_ ist...
+_Überzeugend_ ist,...
 
-* dass die Autoren der Forschungssynthese sehr strenge Qualitätskriterien für die einzelnen Studien angewendet haben und daher die aufgenommenen Studien eine hohe Qualität aufweisen.
-* dass sichergestellt wurde, dass keine Verzerrung der Ergebnisse beispielsweise durch eine mögliche Bevorzugung statistisch signifikanter Studien, entstand.
-* dass die Autoren transparent beschrieben haben welche Studien sie aufgenommen haben und wie diese Studien aufgebaut waren.
+* dass die Autor*innen der Forschungssynthese sehr strenge Qualitätskriterien für die einzelnen Studien angewendet haben und daher die aufgenommenen Studien eine hohe Qualität aufweisen.
+* dass sichergestellt wurde, dass keine Verzerrung der Ergebnisse, beispielsweise durch eine mögliche Bevorzugung statistisch signifikanter Studien, entstand.
+* dass die Autor*innen transparent beschrieben haben, welche Studien sie aufgenommen haben und wie diese Studien aufgebaut waren.
 * dass neben quantitativen Studien auch qualitative Studien berücksichtigt wurden und so der aktuelle Forschungsstand zu Gamification umfassend abgebildet wurde.
 
 
 
 \
 
-_Bei der Interpretation zu bedenken_ ist...
+_Bei der Interpretation zu bedenken_ ist,...
 
-* dass die Wirkmechanismen von spielerischen Elementen in einzelnen Fächer aufgrund der geringen empirischen Basis nicht differenziert betrachtet werden konnten.
+* dass die Wirkmechanismen von spielerischen Elementen in einzelnen Fächern aufgrund der geringen empirischen Basis nicht differenziert betrachtet werden konnten.
 * dass die Hälfte der aufgenommenen Studien im asiatischen Kontext durchgeführt wurden und somit die Übertragbarkeit auf das deutsche Bildungssystem geprüft werden muss.
 
 
@@ -463,20 +465,12 @@ gauge(80, min = 0, max = 100, symbol = "%", gaugeSectors(
 ```
 79.9% der Lernenden in den zwei Gruppen (mit vs. ohne Gamification) werden sich überschneiden.
 
-### Wahrscheinlichkeit der Überlegenheit
-
-```{r}
-gauge(64, min = 0, max = 100, symbol="%", gaugeSectors(
-  success = c(53, 100), warning = c(48, 52), danger = c(0, 47)
-))
-```
-Es gibt eine 64.1 % Wahrscheinlichkeit dass eine zufällig ausgewählte Person aus der Gruppe "mit Gamification" besser abschneidet als eine Person aus der Gruppe "ohne Gamification".
 
 ### Zu analysierende Personen
 ```{r}
-valueBox(5.9, 
-         icon = "fa-user-plus", 
-         caption = "Anzahl der Personen, die mit spielerischen Elementen lernen müssen: Um ein besseres Ergebnis in der Gruppe mit Gamification im Vergleich zur Gruppe ohne Gamification zu erzielen, müssen durschnittlich 5.8 Lernende analysiert werden.",
+valueBox(NULL,
+         caption = "Gamification hat einen mittleren Effekt auf den Lernerfolg. 
+         Über alle Studien hinweg zeigte sich, dass Lernende, die während des Lernens spielerische Elemente anwendeten, signifikant mehr lernten als Lernende, die ohne spielerische Elemente lernten.",
          color ="#deb787") #18bc9c 
 ```
 

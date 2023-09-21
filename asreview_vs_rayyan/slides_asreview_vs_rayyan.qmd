@@ -12,7 +12,7 @@ format:
   revealjs:
       theme: [sky, www/custom.scss] # 
       logo: www/dipf-logo.png
-      footer: "Slides: [bit.ly/earli23-v](https://bit.ly/earli23-v) (view) | [bit.ly/earli23-d](https://bit.ly/earli23-d) (download from github)"
+      footer: "Slides: [bit.ly/AG-SR-v](https://bit.ly/AG-SR-v) (view) | [bit.ly/AG-SR-d](https://bit.ly/AG-SR-d) (download, via button on very right)"
       smaller: true
       scrollable: true
       width: 1500

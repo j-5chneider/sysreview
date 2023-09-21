@@ -1,0 +1,241 @@
+---
+title: 'Features compared' 
+subtitle: ''
+title-slide-attributes:
+  data-background-image: www/title-bg.jpg
+  data-background-size: cover
+  data-background-opacity: "0.5"
+author: "Jürgen Schneider"
+date: "25 Sep 2023" #last-modified # today
+date-format: "DD MMMM YYYY"
+format: 
+  revealjs:
+      theme: [sky, www/custom.scss] # 
+      logo: www/dipf-logo.png
+      footer: "Slides: [bit.ly/earli23-v](https://bit.ly/earli23-v) (view) | [bit.ly/earli23-d](https://bit.ly/earli23-d) (download from github)"
+      smaller: true
+      scrollable: true
+      width: 1500
+      height: 850
+      hide-inactive-cursor: false
+      embed-resources: true
+bibliography: ../www/references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+### DOWNLOAD NEWEST SOURCES
+# download.file("https://drive.google.com/uc?export=download&id=1ASV99YHMHSNChSNzqbZwvz2SiqYvmqO_", # befindet sich im DIPF Ordner
+#               "www/references.bib", overwrite = T)
+
+library(fontawesome)
+```
+
+
+## Why even bother?
+\
+\
+
+* specialized software __organizes screening__ task<br />`r fa("right-long", fill="darkgrey")` idea: ready-to-use setup, tailored at screening for reviews<br /><br /><br /><br />
+* __save time__<br />`r fa("right-long", fill="darkgrey")` sort documents by relevance via machine learning
+
+## Software options
+
+[@Burgard.Bittermann.2023]
+![](www/burgard_tab2.jpeg){width=44%}
+
+
+## Active learning
+\
+\
+
+Example: SVM (support vector machines) used by Rayyan:  
+
+1. __manually reviewed__ references `r fa("right-long", fill="darkgrey")` word combinations that differentiate between included and excluded
+2. predictive model __computes inclusion probabilities__ to the remaining records
+
+\
+
+ASReview offers __several algorithms__ to choose from
+
+\
+\
+__Output:__  
+`r fa("arrow-down-wide-short", fill="darkgrey")` ASReview sorts the remaining records  
+`r fa("star-half-stroke", fill="darkgrey")` Rayyan symbolizes inclusion probability as stars (and sorts)
+
+## How good does it work?
+
+\
+\
+
+__Stopping rules:__
+
+* pragmatic: after ...% of screened documents
+* heuristic: after ... consecutive irrelevant documents
+* sampling: tool estimates to have found ...% of relevant documents
+
+\
+\
+
+__Metrics: __
+
+* Recall: Share of relevant papers found<br />`r fa("lightbulb", fill="darkgrey")` _89 of 100 relevant papers were found: recall of .89_ <br /><br />
+* WSS: Work saved over sampling (for a certain recall)<br />`r fa("lightbulb", fill="darkgrey")` _After screening 70% of documents, I found 100% of relevant records, therefore saved 30% of work_
+
+
+[@Scherhag.Burgard.2023]
+
+## How good does it work?
+
+[@Scherhag.Burgard.2023]
+![](www/scherhag_slide10.jpg){width=83%}
+
+## How good does it work?
+
+[@Scherhag.Burgard.2023]
+![](www/scherhag_slide11.jpg){width=83%}
+
+
+## How good does it work?
+
+\
+\
+
+* ASReview outperforms Rayyan<br /><br />
+* Stopping after ...% most reliable<br /><br />
+* Combination of stopping rules <br />`r fa("right-long", fill="darkgrey")` _stopping after min. 80% screened __AND__ 50 consecutive irrelevant _
+
+
+
+## Practical features
+
+```{r}
+
+library(kableExtra)
+library(tidyverse)
+
+table_data <- data.frame(
+  feature = c(
+    "Free",
+    "Open Source",
+    "Platform",
+    "Data remains on local machine",
+    "Detecting duplicates",
+    "Two or more coders possible",
+    "# of docs to be coded before sorting algorithm can run",
+    "Blinding authors possible",
+    "Keywords for include/exclude to be highlighted in abstracts",
+    "Specific feature to code exclusion reason",
+    "Feature to code labels",
+    "Export of coded results in an easy to use/read form"),
+  ASReview = c(
+    "Yes",
+    "Yes",
+    "User-unfriendly local installation",
+    "Yes",
+    "No",
+    "No",
+    "2 (1 exclude, 1 include)",
+    "Yes",
+    "No",
+    "No (needs to be typed in manually in the notes field for every doc)",
+    "No",
+    "Yes"),
+  Rayyan = c(
+    "(Yes) Free version available",
+    "No",
+    "Browser-based or mobile version",
+    "No",
+    "Yes",
+    "Yes",
+    "50",
+    "No",
+    "Yes (each coder)",
+    "Yes (once typed in, can be coded with other docs)",
+    "Yes (once typed in, can be coded with other docs)",
+    "No (but I can share a script for that)")
+  )
+
+table_data$ASReview <- cell_spec(table_data$ASReview, 
+                                 background  = case_when(
+                                   str_detect(table_data$ASReview, "Yes") ~ "#7AAD7B",
+                                   str_detect(table_data$ASReview, "2") ~ "#7AAD7B",
+                                   str_detect(table_data$ASReview, "No")  ~ "#e04d38",
+                                   str_detect(table_data$ASReview, "unfriendly")  ~ "#e04d38",
+                                   TRUE ~ "#FFF"))
+
+table_data$Rayyan <- cell_spec(table_data$Rayyan, 
+                                 background  = case_when(
+                                   str_detect(table_data$Rayyan, "Yes") ~ "#7AAD7B",
+                                   str_detect(table_data$Rayyan, "Browser") ~ "#7AAD7B",
+                                   str_detect(table_data$Rayyan, "No")  ~ "#e04d38",
+                                   str_detect(table_data$Rayyan, "50")  ~ "#e04d38",
+                                   TRUE ~ "#FFF"))
+
+table_data$feature <- cell_spec(table_data$feature, 
+                                italic = T)
+
+table_data |>
+  dplyr::slice(1:4) |>
+  kbl(format="markdown") 
+```
+
+## Practical features
+
+```{r}
+table_data |>
+  dplyr::slice(5:12) |>
+  kbl(format="markdown") 
+```
+
+
+## Hands-on
+\
+\
+
+![](www/rayyan.jpg){width=50%} ![](www/asreview.jpg){width=42%}
+
+## Script for Rayyan
+
+\
+
+You'll only need to change things in the lines with comments mentioning "DO:"  
+
+\
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(tidyverse)
+library(rio)
+
+freq_screened <- rio::import(file=here("[path to]/articles.csv")) # DO: INSERT PATH
+
+freq_screened <- freq_screened %>%
+  dplyr::mutate(excl_reason = str_extract(.$notes, "RAYYAN-EXCLUSION-REASONS:.*?(\\||$)"), # extract exclusion reasons
+                labels = str_extract(.$notes, "RAYYAN-LABELS:.*?(\\||$)"),       # extract labels coded
+                decision_c1 = str_extract(.$notes, "Jürgen\"\"=>\"\".*?\"\""),    # extract decision from coder 1, DO: CHANGE NAME!
+                decision_c2 = str_extract(.$notes, "Juergen\"\"=>\"\".*?\"\"")) %>% # extract decision from coder 2, DO: CHANGE NAME!
+  # remove prefixes or recode
+  dplyr::mutate(excl_reason = str_remove_all(excl_reason, "RAYYAN-EXCLUSION-REASONS:\\s"),
+                labels = str_remove_all(labels, "RAYYAN-LABELS:\\s|\\s\\|"),
+                decision_c1 = case_when(                                      
+                  str_detect(decision_c1, "Excluded") ~ "Excluded",           
+                  str_detect(decision_c1, "Included") ~ "Included",           
+                  str_detect(decision_c1, "Maybe") ~ "Maybe"),                
+                decision_c2 = case_when(                                      
+                  str_detect(decision_c2, "Excluded") ~ "Excluded",           
+                  str_detect(decision_c2, "Included") ~ "Included",           
+                  str_detect(decision_c2, "Maybe") ~ "Maybe"),
+                agreement = case_when(        # is there agreement on the decision?
+                  decision_c1 == decision_c2 ~ 1,
+                  TRUE ~ 0)
+  )
+```
+
+
+## References

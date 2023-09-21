@@ -1,0 +1,78 @@
+/*-- scss:defaults --*/
+  
+.slide-background-content {
+    background-color: #fff;
+}
+
+.slide-logo {
+  max-height: 10% !important;
+}
+
+.date {
+  font-size: .7em;
+  color: #373F43;
+}
+
+.flowchart2a, .flowchart2b, .flowchart2c {
+    
+    margin: 10px;
+    padding: 3px;
+    color: #373F43;
+}
+
+.flowchart2a {
+    background-color: #f3910080;
+}
+
+.flowchart2b {
+    background-color: #f3910055;
+}
+
+.flowchart2c {
+    background-color: #f3910030;
+}
+
+.citation {
+  float: right;
+  opacity: .6;
+  font-size: .7em;
+}
+
+.myref > p {
+  font-size: 10px;
+}
+
+.blueTop, .blueBottom {
+        padding: 5px;
+        text-align: center;
+}
+
+.blueTop {
+    color: #FFF;
+    background-color: #6ca5d990;
+}
+
+.blueBottom {
+    background-color: #6ca5d940;
+}
+
+
+/*-- BG COLORS --*/
+.yellow {
+    background-color: #f3910080;
+}
+
+.blue {
+    color: #FFF;
+    background-color: #6ca5d990;
+}
+
+
+/*-- FONT  --*/
+strong{
+  color:#6DA5D5;
+}
+
+.test {
+  background-color: #F29400 !important;
+}

@@ -85,4 +85,4 @@ references <- references |>
 
 ## Export the data set to the working directory as CSV
 # This CSV is compatible for import to Rayyan and ASReview
-rio::export(references, "3_data/2_systematic_Review/references_googleScholar_directives_DE.csv")
+rio::export(references, "references_googleScholar.csv")

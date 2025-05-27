@@ -1,0 +1,117 @@
+---
+title: STANDARDS 
+subtitle: for systematic reviews in Psychology and Education
+date: today
+author:
+  - name: Jürgen Schneider
+    orcid: 0000-0002-3772-4198
+    email: ju.schneider@dipf.de
+    affiliation: 
+      - name: <img src="www/dipf-logo.png" width="40%" />
+        url: https://www.dipf.de/en/institute/staff/schneider-juergen?set_language=en
+license: "CC BY SA"
+logo: www/dipf-logo.png
+format:
+  closeread-html:
+    cr-style:
+      narrative-background-color-sidebar: "#231f20"
+      narrative-text-color-sidebar: "#4e4e5c"
+      section-background-color: "#4e4e5c" 
+      section-outer-margin: 250px
+      poem-font-family: Nunito Sans
+    embed-resources: true # will make standalone html file
+theme: lux
+css: www/style.css
+bibliography: www/references.bib
+csl: www/apa7.csl
+---
+
+```{r}
+library(fontawesome)
+```
+
+
+:::{.cr-section}
+
+:::{focus-on="cr-story1" scale-by="1" pan-to="0%,0%"}
+# Overview
+:::
+
+:::{#cr-story1}
+
+![](www/timeline.jpg){.fig-story70}
+:::
+
+
+
+
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%, 105%"}
+Prereg:
+PRISMA-P (-> PROSPERO)
+OSF
+PreregRS (PRISMA, MARS)
+
+Frameworks
+see [@Kolaski.etal.2023, Table 2]
+:::
+
+
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,65%"}
+How to work around publication bias (e.g., grey literature)
+Checklist: Peer Review of Electronic Search Strategies (PRESS) https://doi.org/10.1016/j.jclinepi.2016.01.021
+PRISMA-S
+:::
+
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%, 25%"}
+Verwendung von z.B. PICO-Framework zur Strukturierung
+Unabhängiges Screening aller Studien durch mindestens zwei Reviewer 
+Screening-manual teilen
+PRISMA-Flowchart
+:::
+
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,-20%"}
+Unabhängiges Coding / Data extraction
+:::
+
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,-60%"}
+STROBE https://www.strobe-statement.org/
+…
+…
+Publication bias, sensitivity analysis (Robustheit); COCHRANE GRADE (Grading of Recommendations, Assessment, Development and Evaluation)
+:::
+
+
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,-100%"}
+PRISMA
+MARS 10.1037/amp0000191
+:::
+
+
+:::{focus-on="cr-story1" scale-by="1" pan-to="0%,0%"}
+AMSTAR 2 (appraisal tool for systematic reviews) http://dx.doi.org/10.1136/bmj.j4008
+Reproducibility in research syntheses (German) doi.org/10.31244/9783830999126.08
+:::
+
+
+
+
+
+
+
+
+@cr-last
+
+:::{#cr-last}
+
+# Vielen Dank!
+\
+
+## **Jürgen Schneider**
+![](www/dipf-logo.png)
+  
+<ju.schneider@dipf.de>
+
+:::
+
+:::
+

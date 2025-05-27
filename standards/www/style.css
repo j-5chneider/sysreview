@@ -1,0 +1,84 @@
+/*body {
+  font-size: 1.5em;
+}*/
+
+
+.narrative-col, .sticky-col {
+  font-size: 1.5em !important;
+}
+
+
+.sticky-col {
+  width: 98% !important;
+}
+
+
+
+.fig-story70 {
+  width: 45%;
+  margin-left: 5%;
+}
+
+.fig-story95 {
+  width: 92%;
+  margin-left: 3%;
+}
+
+.border-round {
+  border-radius: 7px;
+  border: 1px lightgrey solid;
+}
+
+#cr-artner > p {
+  margin-left: 10%;
+}
+
+#title-block-header {
+  min-height: 100vh;
+  font-size: 1.5em !important;
+}
+
+
+.border1{
+  border: 1px solid darkgrey;
+}
+
+.title {
+  font-size: 1.5em !important;
+}
+
+.quarto-title {
+  margin-top: 25%;
+  margin-bottom: 15%;
+  font-size: 1.5em !important;
+}
+
+.narrative-col h1, .narrative-col h2, .narrative-col a {
+  color: #fff !important;
+}
+
+
+.sticky-col strong {
+  color: #E07B00;
+  font-weight: 900;
+}
+
+
+
+.firstcol {
+  width: 15% !important;
+}
+
+.secondcol, .thirdcol, .fourthcol {
+  width: 28% !important;
+}
+
+.addborder {
+  border-top: 1px solid grey;
+  padding-top: 10px !important;
+}
+
+
+.bigger-font {
+  font-size: 2em !important;
+}

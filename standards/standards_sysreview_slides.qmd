@@ -15,7 +15,7 @@ format:
   closeread-html:
     cr-style:
       narrative-background-color-sidebar: "#231f20"
-      narrative-text-color-sidebar: "#4e4e5c"
+      narrative-text-color-sidebar: "#fff"
       section-background-color: "#4e4e5c" 
       section-outer-margin: 250px
       poem-font-family: Nunito Sans
@@ -33,6 +33,22 @@ library(fontawesome)
 
 :::{.cr-section}
 
+:::{focus-on="cr-story0"}
+# My key sources
+**(and widely recognized guides)**
+:::
+
+:::{#cr-story0}
+
+* @Cooper.2017
+* @Cooper.etal.2019
+* [Cochrane Handbook for Systematic Reviews of Interventions](https://training.cochrane.org/handbook/current)
+* [equator-network](https://www.equator-network.org/)
+:::
+
+
+
+
 :::{focus-on="cr-story1" scale-by="1" pan-to="0%,0%"}
 # Overview
 :::
@@ -45,51 +61,103 @@ library(fontawesome)
 
 
 
-:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%, 105%"}
-Prereg:
-PRISMA-P (-> PROSPERO)
-OSF
-PreregRS (PRISMA, MARS)
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="56%, 105%"}
+# Preregistration templates
 
-Frameworks
-see [@Kolaski.etal.2023, Table 2]
+* In OSF [@VanDenAkker.etal.2023]
+* [PRISMA-P](https://www.prisma-statement.org/protocols)
+* PreregRS [@Schneider.etal.2022]
+
+\
+
+# Frameworks
+see @Kolaski.etal.2023, Table 2
 :::
 
 
-:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,65%"}
-How to work around publication bias (e.g., grey literature)
-Checklist: Peer Review of Electronic Search Strategies (PRESS) https://doi.org/10.1016/j.jclinepi.2016.01.021
-PRISMA-S
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="56%,65%"}
+# Reasoning
+* On publication bias (e.g., incuding grey literature)
+* On recall and precision [see @Cooper.etal.2019, Ch. 4.5]
+
+\
+
+# Documentation
+[PRISMA-S](https://www.prisma-statement.org/prisma-search)
+
+\
+
+# Checklist
+Peer Review of Electronic Search Strategies (PRESS) [@McGowan.etal.2016]
+
 :::
 
-:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%, 25%"}
-Verwendung von z.B. PICO-Framework zur Strukturierung
-Unabhängiges Screening aller Studien durch mindestens zwei Reviewer 
-Screening-manual teilen
-PRISMA-Flowchart
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="56%, 25%"}
+# Frameworks
+* e.g., PICO  
+* more see @Kolaski.etal.2023, Table 2
+
+\
+
+# Objectivity
+Independent screening of 100% by at least 2 reviewers 
+
+\
+
+# Open Materials
+Share screening manual with publication
+
+\
+
+# Documentation
+[PRISMA flow diagram](https://www.prisma-statement.org/prisma-2020-flow-diagram)
 :::
 
-:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,-20%"}
-Unabhängiges Coding / Data extraction
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="56%,-20%"}
+# Objectivity
+Independent data extraction and coding of 100% by at least 2 reviewers 
+
+\
+
+# Open Materials
+Share coding manual with publication
 :::
 
-:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,-60%"}
-STROBE https://www.strobe-statement.org/
-…
-…
-Publication bias, sensitivity analysis (Robustheit); COCHRANE GRADE (Grading of Recommendations, Assessment, Development and Evaluation)
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="56%,-60%"}
+# Primary studies
+* Randomized: Cochrane [RoB 2](https://training.cochrane.org/handbook/current/chapter-08)
+* Non-randomized: [ROBINS-I](https://methods.cochrane.org/robins-i)
+* Observational: [STROBE](https://www.strobe-statement.org/) 
+
+\
+
+# Open Code
+FAIR and reproducible data analysis [@Ziemann.etal.2023]
+
+\
+
+# Synthesized findings
+* Investigate publication bias, sensitivity analysis
+* Cochrane [GRADE](https://training.cochrane.org/grade-approach)
 :::
 
 
-:::{focus-on="cr-story1" scale-by="2.5" pan-to="58%,-100%"}
-PRISMA
-MARS 10.1037/amp0000191
+:::{focus-on="cr-story1" scale-by="2.5" pan-to="56%,-100%"}
+# Reporting
+
+* [PRISMA 2020 checklist](https://www.prisma-statement.org/prisma-2020-checklist)
+* MARS [@Appelbaum.etal.2018]
 :::
 
 
 :::{focus-on="cr-story1" scale-by="1" pan-to="0%,0%"}
-AMSTAR 2 (appraisal tool for systematic reviews) http://dx.doi.org/10.1136/bmj.j4008
-Reproducibility in research syntheses (German) doi.org/10.31244/9783830999126.08
+# Check yourself
+Appraisal tool for systematic reviews: AMSTAR 2 [@Shea.etal.2017]
+
+\
+
+# Reproducibility 
+in research syntheses [@Schneider.Heck.2024, German]
 :::
 
 
@@ -103,7 +171,7 @@ Reproducibility in research syntheses (German) doi.org/10.31244/9783830999126.08
 
 :::{#cr-last}
 
-# Vielen Dank!
+# **Thank you!**
 \
 
 ## **Jürgen Schneider**
@@ -115,3 +183,10 @@ Reproducibility in research syntheses (German) doi.org/10.31244/9783830999126.08
 
 :::
 
+
+
+
+\
+
+#### Credit
+Title page picture by <a href="https://unsplash.com/de/@shydzynr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">shydzynr</a> on <a href="https://unsplash.com/de/fotos/ein-verschwommenes-bild-eines-grun-weissen-hintergrunds-f8j9du8HWdQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>

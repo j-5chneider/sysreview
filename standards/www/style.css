@@ -29,14 +29,18 @@
   border: 1px lightgrey solid;
 }
 
-#cr-artner > p {
-  margin-left: 10%;
-}
 
 #title-block-header {
   min-height: 100vh;
   font-size: 1.5em !important;
 }
+
+#quarto-content{
+  background-image: url(title-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 
 
 .border1{
@@ -53,17 +57,28 @@
   font-size: 1.5em !important;
 }
 
-.narrative-col h1, .narrative-col h2, .narrative-col a {
+.narrative-col h1, .narrative-col h2, .narrative-col h3, .narrative-col a , .narrative-col {
+  color: #fff !important;
+}
+
+.sticky-col {
   color: #fff !important;
 }
 
 
 .sticky-col strong {
-  color: #E07B00;
+  color: #ffdfb9;
   font-weight: 900;
 }
 
+.sticky-col h1 strong {
+  color: #a9cae9;
+  font-weight: 900;
+}
 
+.quarto-appendix-contents a {
+  color: #000 !important;
+}
 
 .firstcol {
   width: 15% !important;
@@ -81,4 +96,24 @@
 
 .bigger-font {
   font-size: 2em !important;
+}
+
+
+
+.citation > a {
+  text-decoration: underline;
+  color: #fff !important;
+}
+
+a {
+  color: #fff !important;
+}
+
+
+#credit a {
+  color: #000 !important;
+}
+
+.quarto-title-author-email {
+  color: #3b3b3b !important;
 }

@@ -147,6 +147,12 @@ FAIR and reproducible data analysis [@Ziemann.etal.2023]
 
 * [PRISMA 2020 checklist](https://www.prisma-statement.org/prisma-2020-checklist)
 * MARS [@Appelbaum.etal.2018]
+
+\
+
+# Open Data
+
+* Share data as open as possible with publication
 :::
 
 
